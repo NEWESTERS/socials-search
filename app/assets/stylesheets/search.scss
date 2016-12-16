@@ -1,0 +1,34 @@
+// Place all the styles related to the search controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+p {
+	font-size: large;
+	font-weight: bold;
+}
+
+body {
+	background-color: #eeeeee;
+}
+
+#wrap {
+	width: 50%;
+	margin: auto;
+	text-align: center;
+}
+
+table {
+	border-collapse: collapse;
+	display: table;
+	margin: auto;
+}
+
+.cell {
+	padding: 5px;
+    display: table-cell;
+    border: solid 1px;
+}
+
+.row_header {
+	font-weight: bold;
+}

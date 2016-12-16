@@ -1,0 +1,22 @@
+<div id="wrap">
+	<p>Результаты поиска по запросу "<%= params[:str] %>"</p>
+	<table class='table'>
+	  <tr class='row_header'>
+	    <td class='cell'>Заголовок</td>
+	    <td class='cell'>Ссылка</td>
+	    <td class='cell'>Ресурс</td>
+	  </tr>
+	  <% @result_array.each do |x| %>
+	    <tr class='row'>
+	      <td class='cell'><%= x["title"] %></td>
+	      <td class='cell'><%= x["link"] %></td>
+	      <td class='cell'><%= x["displayLink"] %></td>
+	    </tr>
+	  <% end %>
+	</table>
+	<br/>
+	<%= form_tag('search_req', :method => 'get') do %>
+		<%= text_field_tag(:str) %>
+		<%= submit_tag("Показать") %>
+	<% end %>
+</div>

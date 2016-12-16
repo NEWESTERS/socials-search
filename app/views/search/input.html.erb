@@ -1,0 +1,8 @@
+<div id="wrap">
+	<p>Поиск в сцосетях через google custom search</p>
+	<%= form_tag('search_req', :method => 'get', id: 'search_form') do %>
+		<%= label_tag("Введите запрос") %>
+		<%= text_field_tag(:str) %>  <br/>  <br/>
+		<%= submit_tag("Найти") %>
+	<% end %>
+</div>
