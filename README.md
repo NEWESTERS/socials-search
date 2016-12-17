@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+![CodeShip Status](https://codeship.com/projects/8e94dcd0-a65f-0134-2e27-4a672739d7ec/status)
