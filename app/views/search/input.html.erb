@@ -1,8 +1,17 @@
 <div id="wrap">
-	<p>Поиск в сцосетях через google custom search</p>
+	<p>Поиск в соцсетях через google custom search</p>
 	<%= form_tag('search_req', :method => 'get', id: 'search_form') do %>
 		<%= label_tag("Введите запрос") %>
 		<%= text_field_tag(:str) %>  <br/>  <br/>
 		<%= submit_tag("Найти") %>
 	<% end %>
+	<br/>
+	<div>
+		<% if user_signed_in? %>
+	    	<span>Здравствуйте, <%= current_user.email %></span>
+	    	<%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+		<% else %>
+	    	<%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+		<% end %>
+	</div>
 </div>

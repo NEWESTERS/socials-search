@@ -1,5 +1,10 @@
 # -*- encoding : utf-8 -*-
 Rails.application.routes.draw do
+  resources :histories
+  devise_for :users
+  
+  get 'users/profile'
+
   get 'search/input'
 
   get 'search/view'
