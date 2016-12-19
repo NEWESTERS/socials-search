@@ -17,7 +17,7 @@ class HistoriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create history" do
     assert_difference('History.count') do
-      post histories_url, params: { history: { request: @history.request } }
+      post histories_url, params: { history: { owner: @history.owner, request: @history.request } }
     end
 
     assert_redirected_to history_url(History.last)
@@ -34,7 +34,7 @@ class HistoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update history" do
-    patch history_url(@history), params: { history: { request: @history.request } }
+    patch history_url(@history), params: { history: { owner: @history.owner, request: @history.request } }
     assert_redirected_to history_url(@history)
   end
 

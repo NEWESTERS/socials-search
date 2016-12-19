@@ -1,2 +1,6 @@
-<h1>Users#profile</h1>
-<p>Find me in app/views/users/profile.html.erb</p>
+<h1>Ваша история,  <%= current_user.email %></h1>
+  <% @history.each do |req| %>
+    <div class="row">
+      <div class="cell"><%= req.request %></div>  
+    </div>
+  <% end %>

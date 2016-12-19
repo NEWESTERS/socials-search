@@ -1,3 +1,16 @@
 class History < ApplicationRecord
-  belongs_to :user
+  validates :owner, :request, :unequality, presence: true
+
+  def unequality
+    !History.find_by_owner owner
+  end
+
+  def self.get_requests_by_owner(owner)
+    requests_record = find_by_owner(owner)
+    if requests_record then JSON.parse(requests_record.request)['request']['value'] end
+  end
+
+  def self.all_requests_hash_array
+    all.map { |x| { id: x.id, owner: x.owner, request: x.request } }
+  end
 end

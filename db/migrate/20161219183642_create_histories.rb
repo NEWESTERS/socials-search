@@ -1,6 +1,7 @@
 class CreateHistories < ActiveRecord::Migration[5.0]
   def change
     create_table :histories do |t|
+      t.string :owner
       t.string :request
 
       t.timestamps
