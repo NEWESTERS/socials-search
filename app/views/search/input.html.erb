@@ -1,18 +1,26 @@
-<div id="wrap">
-	<p>Поиск в соцсетях через google custom search</p>
-	<%= form_tag('search_req', :method => 'get', id: 'search_form') do %>
-		<%= label_tag("Введите запрос") %>
-		<%= text_field_tag(:str) %>  <br/>  <br/>
-		<%= submit_tag("Найти") %>
-	<% end %>
-	<br/>
+<div class="wrap" id="search">
+	<div>
+    	<div class='headline'><%= t('search_title') %></div>
+    	<div id="google"><%= image_tag('https://www.google.ru/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png') %></div>
+    	<div>
+			<%= form_tag('search_req', :method => 'get', id: 'search_form') do %>
+				<%= text_field_tag :str, '', autofocus: true %>
+				<%= submit_tag("Найти") %>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+<div class="wrap" id="login_status">
 	<div>
 		<% if user_signed_in? %>
-	    	<span>Здравствуйте, <%= current_user.email %></span>
-	    	<%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
-	    	<%= link_to 'История запросов', 'users/profile', :method => :get %>
+		    <div>Здравствуйте, <%= current_user.email %></div>
+		    <div>
+			    <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+			    <%= link_to 'История запросов', 'users/profile', :method => :get %>
+		    </div>
 		<% else %>
-	    	<%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+		    <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
 		<% end %>
 	</div>
 </div>

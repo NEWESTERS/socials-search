@@ -1,6 +1,21 @@
-<h1>Ваша история,  <%= current_user.email %></h1>
-  <% @history.each do |req| %>
-    <div class="row">
-      <div class="cell"><%= req.request %></div>  
-    </div>
-  <% end %>
+<div class="wrap" id="output">
+	<div>
+		<h1>Ваша история,  <%= current_user.email %></h1>
+		<% if !@history.nil? %>
+			<table class="table">
+				<tr class="row_header">
+					<td class="cell">Дата</td>
+					<td class="cell">Запрос</td>
+				</tr>
+				<% @history.each do |req| %>
+					<tr class="row_header">
+						<td class="cell"><%= req.created_at %></td>
+						<td class="cell"><%= req.request %></td>
+					</tr>
+				<% end %>
+			</table>
+		<% else%>
+			<div>Ваша история пуста</div>
+		<% end %>
+  	</div>
+</div>

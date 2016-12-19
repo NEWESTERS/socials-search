@@ -1,9 +1,5 @@
 class History < ApplicationRecord
-  validates :owner, :request, :unequality, presence: true
-
-  def unequality
-    !History.find_by_owner owner
-  end
+  validates :owner, :request, presence: true
 
   def self.get_requests_by_owner(owner)
     requests_record = find_by_owner(owner)
