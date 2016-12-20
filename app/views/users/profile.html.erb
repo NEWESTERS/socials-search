@@ -1,21 +1,21 @@
-<div class="wrap" id="output">
+<div class="wrap" id="history">
 	<div>
-		<h1>Ваша история,  <%= current_user.email %></h1>
+		<h1><%= t('history_title') + current_user.email %></h1>
 		<% if !@history.nil? %>
 			<table class="table">
 				<tr class="row_header">
-					<td class="cell">Дата</td>
-					<td class="cell">Запрос</td>
+					<td class="date_cell"><%= t('date') %></td>
+					<td class="req_cell"><%= t('request') %></td>
 				</tr>
 				<% @history.each do |req| %>
 					<tr class="row_header">
-						<td class="cell"><%= req.created_at %></td>
-						<td class="cell"><%= req.request %></td>
+						<td class="date_cell"><%= req.created_at.to_s.split('')[0..18].join %></td>
+						<td class="req_cell"><%= req.request %></td>
 					</tr>
 				<% end %>
 			</table>
 		<% else%>
-			<div>Ваша история пуста</div>
+			<div><%= t('empty_history') %></div>
 		<% end %>
   	</div>
 </div>

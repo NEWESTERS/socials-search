@@ -10,11 +10,13 @@ class SearchController < ApplicationController
   def view
   	@req = (buf = params[:str]).nil? ? '' : buf
 
-    get_link = 'https://www.googleapis.com/customsearch/v1?q=' + @req + '&cx=010204896937700981713:-oz6bxkupgk&key=AIzaSyAmWM5aIFTy4dDJ8xmaVK7SjvtfUjC_r5E'
-  	get_link = Addressable::URI.parse(get_link).normalize
-    get_res = Net::HTTP.get(URI.parse(get_link))
-      
-    @result_array = JSON.parse(get_res)["items"]
+    get_res = get_result_hash(@req)
+    
+    if !get_res.nil?  
+      @result_array = result_processing(get_res["items"])
+    else
+      @result_array = nil
+    end
 
     if !current_user.nil?
       new_req = History.new do |req|
@@ -22,6 +24,32 @@ class SearchController < ApplicationController
         req.request = @req
       end
       new_req.save
+    end
+  end
+
+  def get_result_hash(request)
+    get_link = 'https://www.googleapis.com/customsearch/v1?q=' + request + '&cx=010204896937700981713:-oz6bxkupgk&key=AIzaSyAmWM5aIFTy4dDJ8xmaVK7SjvtfUjC_r5E'
+    get_link = Addressable::URI.parse(get_link).normalize
+    JSON.parse(Net::HTTP.get(URI.parse(get_link)))
+  end
+
+  def result_processing hashes
+    if !hashes.nil?
+      hashes.map do |hash|
+        result = { :link => hash["displayLink"], :title => hash["title"], :img => "" }
+        if hash["displayLink"].include? "vk"
+          result[:img] = "https://pp.vk.me/c543104/v543104095/1783c/cOtdLh_Fw6w.jpg"
+        elsif hash["displayLink"].include? "youtube"
+          result[:img] = "https://www.youtube.com/yt/brand/media/image/YouTube-icon-full_color.png"
+        elsif hash["displayLink"].include? "twitter"
+          result[:img] = "https://pbs.twimg.com/profile_images/767879603977191425/29zfZY6I.jpg"
+        else
+          result[:img] = "http://kingofwallpapers.com/x/x-001.jpg"
+        end
+        result
+      end
+    else
+      nil
     end
   end
 end

@@ -31,9 +31,8 @@ body{
     margin: auto;
 }
 
-a,
-input[type="submit"]{
-    color: #2d2d2d;
+.btn {
+	color: black;
     border: 1px #000 solid;
     padding: 6px;
     text-decoration: none;
@@ -43,41 +42,39 @@ input[type="submit"]{
     font-family: sans-serif;
 }
 
-input[type="submit"]{
+.btn {
 	height: 34px;
     border-radius: 5px;
     font-family: sans-serif;
 }
 
-a:hover,
-input[type="submit"]:hover{
-    color: #fff;
+.btn:hover {
     background-color: #007aff;
     border-color: #007aff;
     cursor: pointer;
 }
 
-form{
+form {
     font-size: large;
 }
 
-input[type="text"],
-input[type="password"]{
+.email,
+.password{
     font-size: large;
-    width: 400px;
-    height: 30px;
+    width: 200px;
+    height: 20px;
     border-radius: 5px;
     border-color: #2d2d2d;
     border-style: solid;
     border-width: 1px;
 }
 
-input[type="text"]:hover,
-input[type="text"]:active,
-input[type="text"]:focus,
-input[type="password"]:hover,
-input[type="password"]:active,
-input[type="password"]:focus{
+.email:hover,
+.email:active,
+.email:focus,
+.password:hover,
+.password:active,
+.password:focus{
     border-color: #007aff;
     outline: none;
 }
@@ -98,6 +95,8 @@ table {
 }
 
 .cell {
+	width: 100px;
+	height: 30px;
     padding: 0px 10px 0px 10px;
     border: solid 1px;
 }
@@ -128,5 +127,5 @@ table {
 }
 
 #login_status>div {
-	width: 30%;
+	width: 20%;
 }

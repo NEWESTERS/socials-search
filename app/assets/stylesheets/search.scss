@@ -18,15 +18,25 @@ body {
 }
 
 table {
+	width: 600px;
 	border-collapse: collapse;
 	display: table;
 	margin: auto;
 }
 
-.cell {
+.img_cell,
+.title_cell {
+	height: 30px;
 	padding: 5px;
-    display: table-cell;
-    border: solid 1px;
+}
+
+.img_cell {
+	width: 100px;
+}
+
+.title_cell {
+	width: 500px;
+	text-align: left;
 }
 
 .row_header {
@@ -42,5 +52,22 @@ table {
     right: 2em;
     line-height: 3em;
 	width: 38%;
+}
+
+.search_field {
+	height: 30px;
+	width: 80%;
+	font-size: large;
+    border-radius: 5px;
+    border-color: #2d2d2d;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.search_field:hover,
+.search_field:active,
+.search_field:focus {
+    border-color: #007aff;
+    outline: none;
 }
 

@@ -1,3 +1,24 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#history>div {
+    top: 2em;
+    right: 2em;
+    line-height: 3em;
+}
+
+#history>div {
+	width: 50%;
+}
+
+.date_cell {
+	width: 10px;
+}
+
+.req_cell {
+	width: 50px;
+}
+
+#form>div {
+	top: 2em;
+    right: 2em;
+    line-height: 3em;
+	width: 20%;
+}

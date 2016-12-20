@@ -4,8 +4,8 @@
     	<div id="google"><%= image_tag('https://www.google.ru/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png') %></div>
     	<div>
 			<%= form_tag('search_req', :method => 'get', id: 'search_form') do %>
-				<%= text_field_tag :str, '', autofocus: true %>
-				<%= submit_tag("Найти") %>
+				<%= text_field_tag :str, '', autofocus: true, class: ["search_field"] %>
+				<%= submit_tag(t('search'), class: ["btn"]) %>
 			<% end %>
 		</div>
 	</div>
@@ -14,13 +14,13 @@
 <div class="wrap" id="login_status">
 	<div>
 		<% if user_signed_in? %>
-		    <div>Здравствуйте, <%= current_user.email %></div>
+		    <div class="headline"><%= t('hello') + current_user.email %></div>
 		    <div>
-			    <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
-			    <%= link_to 'История запросов', 'users/profile', :method => :get %>
+			    <%= link_to t('sign_out'), destroy_user_session_path, :method => :delete, class: ["btn"] %>
+			    <%= link_to t('request_history'), 'users/profile', :method => :get, class: ["btn"] %>
 		    </div>
 		<% else %>
-		    <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+		    <%= link_to t('sign_in'), new_user_session_path, class: ["btn"] %>     <%= link_to t('sign_up'), new_user_registration_path, class: ["btn"] %>
 		<% end %>
 	</div>
 </div>

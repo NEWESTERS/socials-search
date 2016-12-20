@@ -20,5 +20,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
   search_title: "Socials search by"
+  history_title: "Your history, "
+  date: "Date"
+  request: "Request"
+  empty_history: "Your history is empty"
+  search_results: "Search results by "
+  site: "Site"
+  result_header: "Header"
+  no_results: "Nothing founded"
+  search: "Search"
+  hello: "Hello, "
+  sign_out: "Sign out"
+  sign_in: "Sign in"
+  sign_up: "Sign up"
+  request_history: "Request history"
