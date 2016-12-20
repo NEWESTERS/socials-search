@@ -41,3 +41,4 @@ ru:
   password_confirmation: "Подтверждение пароля"
   characters_minimum: " символов минимум"
   forgot_password: "Забыли пароль?"
+  main: "На главную"

@@ -1,11 +1,12 @@
 <div class="wrap" id="search">
 	<div>
-    	<div class='headline'><%= t('search_title') %></div>
+		<div id="result"></div>
+    	<div class='headline' onmouseover="get_socials()"><%= t('search_title') %></div>
     	<div id="google"><%= image_tag('https://www.google.ru/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png') %></div>
     	<div>
 			<%= form_tag('search_req', :method => 'get', id: 'search_form') do %>
 				<%= hidden_field_tag :start, '1' %> 
-				<%= text_field_tag :str, '', autofocus: true, :hover =>'check()', class: ["search_field"] %>
+				<%= text_field_tag :str, '', autofocus: true, :required => true, class: ["search_field"] %>
 				<%= submit_tag(t('search'), class: ["btn"]) %>
 			<% end %>
 		</div>

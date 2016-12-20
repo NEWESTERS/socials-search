@@ -2,7 +2,7 @@
 	<div>
 		<%= form_tag('search_req', :method => 'get') do %>
 			<%= hidden_field_tag :start, '1' %> 
-			<%= text_field_tag :str, '', autofocus: true, class: ["search_field"] %>
+			<%= text_field_tag :str, '', autofocus: true, required: true, class: ["search_field"] %>
 			<%= submit_tag(t('search'), class: ["btn"]) %>
 		<% end %>
 		<div class="headline"><%= t('search_results') %> "<%= params[:str] %>"</div>
