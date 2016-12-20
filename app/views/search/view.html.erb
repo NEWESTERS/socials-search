@@ -1,6 +1,7 @@
 <div class="wrap" id="output">
 	<div>
 		<%= form_tag('search_req', :method => 'get') do %>
+			<%= hidden_field_tag :start, '1' %> 
 			<%= text_field_tag :str, '', autofocus: true, class: ["search_field"] %>
 			<%= submit_tag(t('search'), class: ["btn"]) %>
 		<% end %>
@@ -20,6 +21,20 @@
 			</table>
 		<% else %>
 			<div><%= t('no_results') %></div>
+		<% end %>
+		<% if @start != '91' %>
+			<%= form_tag('search_req', :method => 'get') do %>
+				<%= hidden_field_tag :start, "#{@start.to_i+10}" %>
+				<%= hidden_field_tag :str, @req %>
+				<%= submit_tag 'next', class: ["btn"] %>
+			<% end %>
+		<% end %>
+		<% if @start != '1' %>
+			<%= form_tag('search_req', :method => 'get') do %>
+				<%= hidden_field_tag :start, "#{@start.to_i-10}" %> 
+				<%= hidden_field_tag :str, @req %>
+				<%= submit_tag 'previous', class: ["btn"] %>
+			<% end %>
 		<% end %>
 	</div>
 </div>
