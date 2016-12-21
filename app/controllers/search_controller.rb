@@ -8,10 +8,9 @@ class SearchController < ApplicationController
   end
 
   def view
-    @start = params[:start].to_s
-
+    @new = params[:new]
+    @start = params[:start]
   	@req = (buf = params[:str]).nil? ? '' : buf
-
     get_res = get_result_hash(@req, @start)
     
     if !get_res.nil?  
@@ -20,7 +19,7 @@ class SearchController < ApplicationController
       @result_array = nil
     end
 
-    if !current_user.nil?
+    if !current_user.nil? && @new == 'true'
       new_req = History.new do |req|
         req.owner = current_user.email
         req.request = @req
@@ -38,7 +37,7 @@ class SearchController < ApplicationController
   def result_processing hashes
     if !hashes.nil?
       hashes.map do |hash|
-        result = { :link => hash["link"], :title => hash["title"], :img => "" }
+        result = { :link => hash["link"], :title => hash["title"], :img => "", :site => 'https://' + hash["displayLink"] }
         if hash["displayLink"].include? "vk"
           result[:img] = "https://pp.vk.me/c543104/v543104095/1783c/cOtdLh_Fw6w.jpg"
         elsif hash["displayLink"].include? "youtube"

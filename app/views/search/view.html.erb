@@ -1,6 +1,20 @@
+<div class="wrap" id="login_status">
+	<div>
+		<% if user_signed_in? %>
+		    <div class="headline"><%= t('hello') + current_user.email %></div>
+		    <div>
+			    <%= link_to t('sign_out'), destroy_user_session_path, :method => :delete, class: ["btn"] %>
+			    <%= link_to t('request_history'), 'users/profile', :method => :get, :class => "btn" %>
+		    </div>
+		<% else %>
+		    <%= link_to t('sign_in'), new_user_session_path, class: ["btn"] %>     <%= link_to t('sign_up'), new_user_registration_path, class: ["btn"] %>
+		<% end %>
+	</div>
+</div>
 <div class="wrap" id="output">
 	<div>
 		<%= form_tag('search_req', :method => 'get') do %>
+			<%= hidden_field_tag :new, 'true' %> 
 			<%= hidden_field_tag :start, '1' %> 
 			<%= text_field_tag :str, '', autofocus: true, required: true, class: ["search_field"] %>
 			<%= submit_tag(t('search'), class: ["btn"]) %>
@@ -14,8 +28,8 @@
 				</tr>
 				<% @result_array.each do |x| %>
 					<tr class='row'>
-						<td class='img_cell'><%= image_tag x[:img], height: 30 %></td>
-						<td class='title_cell'><%= link_to x[:title], x[:link] %></td>
+						<td class='img_cell'><%= link_to image_tag( x[:img], height: 30 ), x[:site], :target => '_blank' %></td>
+						<td class='title_cell'><%= link_to x[:title], x[:link], :target => '_blank' %></td>
 					</tr>
 				<% end %>
 			</table>
@@ -24,6 +38,7 @@
 		<% end %>
 		<% if @start != '91' %>
 			<%= form_tag('search_req', :method => 'get') do %>
+				<%= hidden_field_tag :new, 'false' %> 
 				<%= hidden_field_tag :start, "#{@start.to_i+10}" %>
 				<%= hidden_field_tag :str, @req %>
 				<%= submit_tag t('next'), class: ["btn"] %>
@@ -31,24 +46,11 @@
 		<% end %>
 		<% if @start != '1' %>
 			<%= form_tag('search_req', :method => 'get') do %>
+				<%= hidden_field_tag :new, 'false' %> 
 				<%= hidden_field_tag :start, "#{@start.to_i-10}" %> 
 				<%= hidden_field_tag :str, @req %>
 				<%= submit_tag t('previous'), class: ["btn"] %>
 			<% end %>
-		<% end %>
-	</div>
-</div>
-
-<div class="wrap" id="login_status">
-	<div>
-		<% if user_signed_in? %>
-		    <div class="headline"><%= t('hello') + current_user.email %></div>
-		    <div>
-			    <%= link_to t('sign_out'), destroy_user_session_path, :method => :delete, class: ["btn"] %>
-			    <%= link_to t('request_history'), 'users/profile', :method => :get, :class => "btn" %>
-		    </div>
-		<% else %>
-		    <%= link_to t('sign_in'), new_user_session_path, class: ["btn"] %>     <%= link_to t('sign_up'), new_user_registration_path, class: ["btn"] %>
 		<% end %>
 	</div>
 </div>

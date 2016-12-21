@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class HistoryTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test 'should not save empty' do
+    history = History.new
+    assert !history.save
+  end
 end

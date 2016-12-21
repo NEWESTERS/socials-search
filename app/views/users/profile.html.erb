@@ -1,26 +1,33 @@
-<div class="wrap" id="history">
-	<div>
-		<h1><%= t('history_title') + current_user.email %></h1>
-		<% if !@history.nil? %>
-			<table class="table">
-				<tr class="row_header">
-					<td class="date_cell"><%= t('date') %></td>
-					<td class="req_cell"><%= t('request') %></td>
-				</tr>
-				<% @history.each do |req| %>
-					<tr class="row_header">
-						<td class="date_cell"><%= req.created_at.to_s.split('')[0..18].join %></td>
-						<td class="req_cell"><%= req.request %></td>
-					</tr>
-				<% end %>
-			</table>
-		<% else%>
-			<div><%= t('empty_history') %></div>
-		<% end %>
-  	</div>
-</div>
 <div class="wrap" id="login_status">
 	<div>
 		<%= link_to t('main'), '/', :method => :get, class: ['btn'] %>
 	</div>
+</div>
+<div class="wrap" id="history">
+	<div>
+		<h1><%= t('history_title') + current_user.email %></h1>
+		<% if @history.any? %>
+			<table class="table">
+				<tr class="row_header">
+					<td class="date_cell"><%= t('date') %></td>
+					<td class="req_cell"><%= t('request') %></td>
+					<td class="date_cell"></td>
+				</tr>
+				<% @history.each do |req| %>
+					<tr class="row_header">
+						<td class="date_cell"><%= req.created_at.localtime.to_formatted_s(:db) %></td>
+						<td class="req_cell"><%= link_to req.request,
+							search_view_path( :new => 'true', :start => '1', :str => req.request ) %></td>
+						<td class="date_cell"><%= button_to t('delete'), "/histories/#{req.id}", method: 'delete' %></td>
+					</tr>
+				<% end %>
+			</table>
+		<% else%>
+			<div class="headline"><%= t('empty_history') %></div>
+		<% end %>
+		<% if current_user.email == 'admin' %>
+			<br/>
+			<%= link_to t('administration'), "/histories", class: ['btn'] %>
+		<% end %>
+  	</div>
 </div>
