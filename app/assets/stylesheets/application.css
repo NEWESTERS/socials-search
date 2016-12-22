@@ -13,39 +13,31 @@
  *= require_tree .
  *= require_self
  */
-body{
-    background-color: #eeeeff;
+body {
+    background-color: #ffffff;
     color: #2d2d2d;
     font-family: sans-serif;
 }
 
-.wrap{
-    margin-top: 10px;
+.wrap {
+    margin-top: 7%;
 }
 
-.wrap>div{
+.wrap>div {
     padding: 10px;
-    background-color: #ddddff;
-    border-radius: 10px;
     text-align: center;
     margin: auto;
 }
 
 .btn {
-	color: black;
-    border: 1px #000 solid;
+    border-style: none;
+	color: white;
     padding: 6px;
     text-decoration: none;
     font-size: large;
-    border-radius: 5px;
-    background-color: #eeeeff;
+    background-color: #48B04C;
     font-family: sans-serif;
-}
-
-.btn {
 	height: 34px;
-    border-radius: 5px;
-    font-family: sans-serif;
 }
 
 .btn:hover {
@@ -59,7 +51,7 @@ form {
 }
 
 .email,
-.password{
+.password {
     font-size: large;
     width: 200px;
     height: 20px;
@@ -74,12 +66,12 @@ form {
 .email:focus,
 .password:hover,
 .password:active,
-.password:focus{
+.password:focus {
     border-color: #007aff;
     outline: none;
 }
 
-.headline{
+.headline {
     font-size: x-large;
 }
 
@@ -89,43 +81,57 @@ table {
     margin-bottom: 10px;
 }
 
-.header{
-    font-weight: bold;
-    border-top: solid 1px;
-}
-
-.cell {
-	width: 100px;
-	height: 30px;
-    padding: 0px 10px 0px 10px;
-    border: solid 1px;
-}
-
-.field{
-  margin-bottom: 0.65em;
-}
-
-#current_user>div,
-#input>div,
-#output>div,
-#login_status>div {
-    top: 2em;
-    right: 2em;
-    line-height: 3em;
-}
-
-#current_user>div{
+#current_user>div {
     width: 25%;
 }
 
-#input>div{
+#input>div {
     width: 80%;
 }
 
-#output>div{
+#output>div {
     width: 40%;
 }
 
-#login_status>div {
-	width: 30%;
+header {
+    width: 100%;
+    margin: auto;
+    margin-top: -30px;
+    height: 40px;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.15);
+    background: rgba(255,255,255,1);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
+}
+
+header>div,
+footer>div {
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+header>.left {
+    float: left;
+}
+
+header>.right {
+    float: right;
+}
+
+.link {
+    color: #48B04C;
+    padding: 6px;
+    text-decoration: none;
+    font-size: medium;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    margin: auto;
+    margin-top: 10%;
 }

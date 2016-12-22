@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
   def profile
-  	@history = History.all.select { |x| x.owner == current_user.email }
+  	@history = History.all.select{ |x| x.owner == current_user.email }.reverse
   end
 end

@@ -55,7 +55,7 @@ class HistoriesController < ApplicationController
   # DELETE /histories/1
   # DELETE /histories/1.json
   def destroy
-    @history.destroy if !current_user.nil? && current_user.email == @history.owner
+    @history.destroy if !@history.nil? && !current_user.nil? && current_user.email == @history.owner
     respond_to do |format|
       format.html { redirect_back(fallback_location: root_path) }
       format.json { head :no_content }

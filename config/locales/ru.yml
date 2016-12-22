@@ -20,7 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
-  search_title: "Поиск по соцсетям с помощью"
+  search_title: "Поиск по соцсетям* с помощью"
   history_title: "Ваша история, "
   date: "Дата"
   request: "Запрос"
@@ -42,7 +42,7 @@ ru:
   characters_minimum: " символов минимум"
   forgot_password: "Забыли пароль?"
   main: "На главную"
-  next: "Следующая страница"
-  previous: "Предыдущая страница"
+  next: "Следующая страница ->"
+  previous: "<- Предыдущая страница"
   delete: "Удалить"
   administration: "Администрирование"

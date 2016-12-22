@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Socials search</title>
-    <%= csrf_meta_tags %>
+  	<head>
+    	<title>Socials search</title>
+   		<%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   		<script src="https://use.fontawesome.com/33c0f9d168.js"></script>
+    	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     
-  </head>
+  	</head>
 
-  <body>
-    <%= yield %>
-  </body>
+  	<body>
+		<header>
+		  		<div class="left"><%= link_to t('main'), '/', :method => :get, class: ['link'] %></div>
+				<% if user_signed_in? %>
+					
+				    <div class="right">
+				    	<%= link_to t('request_history'), users_profile_path, :method => :get, class: ['link'] %>
+					    <%= link_to t('sign_out'), destroy_user_session_path, :method => :delete, class: ['link'] %> 
+				    </div>
+				    <div class="headline right"><%= current_user.email %></div>
+				<% else %>
+					<div class="right">
+					    <%= link_to t('sign_in'), new_user_session_path, class: ["btn"] %>
+					    <%= link_to t('sign_up'), new_user_registration_path, class: ["btn"] %>
+					</div>
+				<% end %>
+		</header>
+
+    	<%= yield %>
+
+    	<footer>
+    		<div>
+	    		<span class="link"><i class="fa fa-rss" aria-hidden="true"></i> Предложения<span> | 
+	    		<span class="link"><i class="fa fa-envelope" aria-hidden="true"></i> vip: 8-900-000<span> | 
+	    		<span class="link"><i class="fa fa-users" aria-hidden="true"></i></i> Наши группы</span> | 
+	    		<span class="link"><i class="fa fa-book" aria-hidden="true"></i> Правила</span> | 
+	    		<span class="link"><i class="fa fa-lock" aria-hidden="true"></i> Политика конфиденциальности</span>
+    		</span>
+    	</footer>
+  	</body>
 </html>

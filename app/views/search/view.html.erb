@@ -1,31 +1,21 @@
-<div class="wrap" id="login_status">
-	<div>
-		<% if user_signed_in? %>
-		    <div class="headline"><%= t('hello') + current_user.email %></div>
-		    <div>
-			    <%= link_to t('sign_out'), destroy_user_session_path, :method => :delete, class: ["btn"] %>
-			    <%= link_to t('request_history'), users_profile_path, :method => :get, :class => "btn" %>
-		    </div>
-		<% else %>
-		    <%= link_to t('sign_in'), new_user_session_path, class: ["btn"] %>     <%= link_to t('sign_up'), new_user_registration_path, class: ["btn"] %>
-		<% end %>
-	</div>
-</div>
 <div class="wrap" id="output">
 	<div>
-		<%= form_tag('search_req', :method => 'get') do %>
+		<%= form_tag 'search_req', :method => 'get', id: 'search_form' do %>
 			<%= hidden_field_tag :new, 'true' %> 
 			<%= hidden_field_tag :start, '1' %> 
-			<%= text_field_tag :str, '', autofocus: true, required: true, class: ["search_field"] %>
-			<%= submit_tag(t('search'), class: ["btn"]) %>
+			<%= text_field_tag :str, params[:str], autofocus: true, required: true, id: 'search_field' %>
+			<%= submit_tag t('search'), id: 'search_button' %>
 		<% end %>
-		<div class="headline"><%= t('search_results') %> "<%= params[:str] %>"</div>
+
+		<!-- <div class="headline"><%= t('search_results') %> "<%= params[:str] %>"</div> -->
+
 		<% if !@result_array.nil? %>
 			<table class='table'>
 				<tr class='row_header'>
 					<td class='img_cell'><%= t('site') %></td>
 				    <td class='title_cell'><%= t('result_header') %></td>
 				</tr>
+
 				<% @result_array.each do |x| %>
 					<tr class='row'>
 						<td class='img_cell'><%= link_to image_tag( x[:img], height: 30 ), x[:site], :target => '_blank' %></td>
@@ -36,21 +26,17 @@
 		<% else %>
 			<div><%= t('no_results') %></div>
 		<% end %>
-		<% if @start != '91' %>
-			<%= form_tag('search_req', :method => 'get') do %>
-				<%= hidden_field_tag :new, 'false' %> 
-				<%= hidden_field_tag :start, "#{@start.to_i+10}" %>
-				<%= hidden_field_tag :str, @req %>
-				<%= submit_tag t('next'), class: ["btn"] %>
-			<% end %>
-		<% end %>
+
 		<% if @start != '1' %>
-			<%= form_tag('search_req', :method => 'get') do %>
-				<%= hidden_field_tag :new, 'false' %> 
-				<%= hidden_field_tag :start, "#{@start.to_i-10}" %> 
-				<%= hidden_field_tag :str, @req %>
-				<%= submit_tag t('previous'), class: ["btn"] %>
-			<% end %>
+			<%= link_to t('previous'),
+				search_view_path( :new => 'false', :start => "#{@start.to_i-10}", :str => @req ),
+				class: ["btn"] %>
+		<% end %>
+
+		<% if @start != '91' %>
+			<%= link_to t('next'),
+				search_view_path( :new => 'false', :start => "#{@start.to_i+10}", :str => @req ),
+				class: ["btn"] %>
 		<% end %>
 	</div>
 </div>

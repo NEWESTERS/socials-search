@@ -1,26 +1,16 @@
-<div class="wrap" id="login_status">
-	<div>
-		<% if user_signed_in? %>
-		    <div class="headline"><%= t('hello') + current_user.email %></div>
-		    <div>
-			    <%= link_to t('sign_out'), destroy_user_session_path, :method => :delete, class: ["btn"] %>
-			    <%= link_to t('request_history'), users_profile_path, :method => :get, class: ["btn"] %>
-		    </div>
-		<% else %>
-		    <%= link_to t('sign_in'), new_user_session_path, class: ["btn"] %>     <%= link_to t('sign_up'), new_user_registration_path, class: ["btn"] %>
-		<% end %>
-	</div>
-</div>
 <div class="wrap" id="search">
 	<div>
+		<!--
     	<div class='headline' onclick="get_socials()"><%= t('search_title') %></div>
     	<div id="google"><%= image_tag('https://www.google.ru/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png') %></div>
+    	-->
+    	<%= image_tag 'https://photos-6.dropbox.com/t/2/AADhgmtlAQVWhqdz_x6lgfw4gO1mPAuVv5TrYb4-1vwB3Q/12/98642356/png/32x32/1/_/1/2/Снимок%20экрана%202016-12-22%20в%2023.53.33.png/EN_-wEwYgS0gAigC/lTEsmbkfc64BDnhc1K6nGV4MZhXLDhsmJY2O32A6fnc?size=1280x960&size_mode=3' %>
     	<div>
-			<%= form_tag('search_req', :method => 'get', id: 'search_form') do %>
+			<%= form_tag 'search_req', :method => 'get', id: 'search_form' do %>
 				<%= hidden_field_tag :new, 'true' %> 
 				<%= hidden_field_tag :start, '1' %> 
-				<%= text_field_tag :str, '', autofocus: true, :required => true, class: ["search_field"] %>
-				<%= submit_tag(t('search'), class: ["btn"]) %>
+				<%= text_field_tag :str, '', autofocus: true, :required => true, id: 'search_field' %>
+				<%= submit_tag t('search'), id: 'search_button' %>
 			<% end %>
 		</div>
 		<div id="tip"></div>

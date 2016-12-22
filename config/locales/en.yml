@@ -20,7 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  search_title: "Socials search by"
+  search_title: "Socials* search by"
   history_title: "Your history, "
   date: "Date"
   request: "Request"
@@ -42,7 +42,7 @@ en:
   characters_minimum: " characters minimum"
   forgot_password: "Forgot your password?"
   main: "Main page"
-  next: "Next page"
-  previous: "Previous page"
+  next: "Next page ->"
+  previous: "<- Previous page"
   delete: "Delete"
   administration: "Administration"
