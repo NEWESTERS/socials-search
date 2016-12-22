@@ -4,7 +4,7 @@
 		    <div class="headline"><%= t('hello') + current_user.email %></div>
 		    <div>
 			    <%= link_to t('sign_out'), destroy_user_session_path, :method => :delete, class: ["btn"] %>
-			    <%= link_to t('request_history'), 'users/profile', :method => :get, :class => "btn" %>
+			    <%= link_to t('request_history'), users_profile_path, :method => :get, :class => "btn" %>
 		    </div>
 		<% else %>
 		    <%= link_to t('sign_in'), new_user_session_path, class: ["btn"] %>     <%= link_to t('sign_up'), new_user_registration_path, class: ["btn"] %>
