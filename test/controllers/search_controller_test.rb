@@ -8,7 +8,7 @@ class SearchControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get view" do
-    get search_view_url
+    get search_view_url( :new => 'true', :start => '1', :str => 'request' )
     assert_response :success
   end
 

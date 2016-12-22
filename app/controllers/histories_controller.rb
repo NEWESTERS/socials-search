@@ -4,7 +4,7 @@ class HistoriesController < ApplicationController
   # GET /histories
   # GET /histories.json
   def index
-    redirect_to '/' if current_user.nil? || current_user.email != 'admin'
+    redirect_back(fallback_location: root_path) if current_user.nil? || current_user.email != 'admin'
     @histories = History.all
   end
 
@@ -55,9 +55,9 @@ class HistoriesController < ApplicationController
   # DELETE /histories/1
   # DELETE /histories/1.json
   def destroy
-    @history.destroy
+    @history.destroy if !current_user.nil? && current_user.email == @history.owner
     respond_to do |format|
-      format.html { redirect_to :back }
+      format.html { redirect_back(fallback_location: root_path) }
       format.json { head :no_content }
     end
   end
