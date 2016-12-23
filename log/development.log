@@ -20326,3 +20326,1756 @@ Processing by SearchController#input as HTML
 Completed 200 OK in 320ms (Views: 302.1ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/" for ::1 at 2016-12-23 12:21:24 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"VQljE0Zm/VFvi2yt/VR5NbNGKTaeboqa/PFLVP32+HjOKoKqAjeENSGyacvqrcJy5X+jNgjtwBUWgR8bwL8nhA=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (23.4ms)
+  [1m[36mUser Load (9.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 314ms (Views: 278.7ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:22:13 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"VQljE0Zm/VFvi2yt/VR5NbNGKTaeboqa/PFLVP32+HjOKoKqAjeENSGyacvqrcJy5X+jNgjtwBUWgR8bwL8nhA=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 70.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:22:32 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"VQljE0Zm/VFvi2yt/VR5NbNGKTaeboqa/PFLVP32+HjOKoKqAjeENSGyacvqrcJy5X+jNgjtwBUWgR8bwL8nhA=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 56.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:30:08 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 157ms (Views: 145.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-12-23 12:30:34 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 92ms (Views: 85.6ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-12-23 12:30:57 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mQG0CupbjDcGpjhBbgvpRx1lSmk2Yv33WdPhaEdUMOsCIlWzrgr1U0ifPSd58lIAS1zAaaDht3izo7Uneh3vFw=="}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:30:57 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 93ms (Views: 89.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-12-23 12:30:59 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 84ms (Views: 82.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-12-23 12:31:04 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WVNNxZ8zLbOKiG+Fn2TheVoutIusy++/eGljLa04NVLcY6bTq3+rf6Nhqfbe9WFhh5sYe/OctxOAz3P4p7iquA==", "user"=>{"email"=>"admin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Войти"}
+  [1m[36mUser Load (21.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (33.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2016-12-23 09:31:04 UTC], ["last_sign_in_at", 2016-12-22 19:50:33 UTC], ["sign_in_count", 7], ["updated_at", 2016-12-23 09:31:04 UTC], ["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 287ms (ActiveRecord: 55.1ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:31:05 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 54.1ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-12-23 12:31:56 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gsWNTWzGQpXoqxqB9DyrhXIXojAcAY5sRjylBu+dSo645WAZw5vJ09VmPPS3v1EHxARPPCUwTdDVNm7oY++KKg=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:31:56 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 83ms (Views: 80.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-12-23 12:31:57 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:33:10 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"zHJiGE0+Xn9P2xd30S0i0iaPtif5PbptBqRxhRNv5Wg2Opx3c8VuRhqQfwVMKZ1GZJW580GeHJjZL62q9MltWg=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 58ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-12-23 12:33:24 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UGQDCgwtzO/pWEhaz8H96Bd/OvjOq/3NsHPDGtSba0Prcg7VBQgpc0IMlsO9SiP85hc3KyBlZcwl9OWmvARBhQ==", "user"=>{"email"=>"admin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Войти"}
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2016-12-23 09:33:24 UTC], ["last_sign_in_at", 2016-12-23 09:31:04 UTC], ["sign_in_count", 8], ["updated_at", 2016-12-23 09:33:24 UTC], ["id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 201ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:33:24 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 50.1ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 12:33:26 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"authenticity_token"=>"S1CW+eNmTotOOeZcQz8Ebcc4Uy7XSSS8OYKRvvDIGV1ybkLVkeqa6v2l/bSMiuYBZ+mFr7KCmC4IWkmSHJIjIg=="}
+  [1m[36mHistory Load (2.0ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 79ms (Views: 62.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/histories" for ::1 at 2016-12-23 12:33:28 +0300
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (2.1ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 98ms (Views: 85.4ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:38:02 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"9jdIHbTk4G+VT+KxLhmpwHnmARSbeg10EEXtFkksMC/PCZwxxmg0DibT+VnhrEus2TfXlf6xseYhnTU6pXYKUA=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (10.4ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 170ms (Views: 156.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/histories" for ::1 at 2016-12-23 12:40:36 +0300
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (3.2ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (55.3ms)
+Completed 200 OK in 126ms (Views: 113.7ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:40:37 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 74.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/search_req?utf8=%E2%9C%93&new=true&start=1&str=direction%3A+ltr&commit=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA" for ::1 at 2016-12-23 12:46:36 +0300
+Processing by SearchController#view as HTML
+  Parameters: {"utf8"=>"✓", "new"=>"true", "start"=>"1", "str"=>"direction: ltr", "commit"=>"Поиск"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.5ms)[0m  [1m[32mINSERT INTO "histories" ("owner", "request", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["owner", "admin"], ["request", "direction: ltr"], ["created_at", 2016-12-23 09:46:36 UTC], ["updated_at", 2016-12-23 09:46:36 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering search/view.html.erb within layouts/application
+  Rendered search/view.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 924ms (Views: 112.5ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:49:40 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"zPY4cZ9cCRC71AQwOR9dCfA+6sPTM9u1kkaiBpndHLz1yOxd7dDdcQhIH9j2qr9lUO88Qrb4ZyejnnoqdYcmww=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (11.3ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 159ms (Views: 147.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:50:19 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"zPY4cZ9cCRC71AQwOR9dCfA+6sPTM9u1kkaiBpndHLz1yOxd7dDdcQhIH9j2qr9lUO88Qrb4ZyejnnoqdYcmww=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (18.3ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 231ms (Views: 215.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:50:47 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"zPY4cZ9cCRC71AQwOR9dCfA+6sPTM9u1kkaiBpndHLz1yOxd7dDdcQhIH9j2qr9lUO88Qrb4ZyejnnoqdYcmww=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 166ms (Views: 160.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:51:19 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"zPY4cZ9cCRC71AQwOR9dCfA+6sPTM9u1kkaiBpndHLz1yOxd7dDdcQhIH9j2qr9lUO88Qrb4ZyejnnoqdYcmww=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 82.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:57:23 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"zPY4cZ9cCRC71AQwOR9dCfA+6sPTM9u1kkaiBpndHLz1yOxd7dDdcQhIH9j2qr9lUO88Qrb4ZyejnnoqdYcmww=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (12.8ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 231ms (Views: 215.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:57:51 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"zPY4cZ9cCRC71AQwOR9dCfA+6sPTM9u1kkaiBpndHLz1yOxd7dDdcQhIH9j2qr9lUO88Qrb4ZyejnnoqdYcmww=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 60.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:57:57 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"zPY4cZ9cCRC71AQwOR9dCfA+6sPTM9u1kkaiBpndHLz1yOxd7dDdcQhIH9j2qr9lUO88Qrb4ZyejnnoqdYcmww=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 48.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 12:59:29 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"zPY4cZ9cCRC71AQwOR9dCfA+6sPTM9u1kkaiBpndHLz1yOxd7dDdcQhIH9j2qr9lUO88Qrb4ZyejnnoqdYcmww=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (12.2ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 187ms (Views: 168.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:00:04 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"zPY4cZ9cCRC71AQwOR9dCfA+6sPTM9u1kkaiBpndHLz1yOxd7dDdcQhIH9j2qr9lUO88Qrb4ZyejnnoqdYcmww=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 84ms (Views: 79.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:00:16 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"zPY4cZ9cCRC71AQwOR9dCfA+6sPTM9u1kkaiBpndHLz1yOxd7dDdcQhIH9j2qr9lUO88Qrb4ZyejnnoqdYcmww=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 59.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:01:03 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"zPY4cZ9cCRC71AQwOR9dCfA+6sPTM9u1kkaiBpndHLz1yOxd7dDdcQhIH9j2qr9lUO88Qrb4ZyejnnoqdYcmww=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 187ms (Views: 179.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 13:02:26 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"authenticity_token"=>"DNVswSIQip8eED06m5M+AmfRdWbxpgfE4kRN+9XlbS4167jtUJxe/q2MJtJUJtxuxwCj55Rtu1bTnJXXOb9XUQ=="}
+  [1m[36mHistory Load (1.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 79ms (Views: 66.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:02:35 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 47.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:10:08 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (23.3ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 243ms (Views: 218.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:10:43 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 102ms (Views: 95.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:10:58 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 97ms (Views: 88.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 13:11:00 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mHistory Load (1.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 137ms (Views: 119.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 13:11:00 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mHistory Load (0.8ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 62ms (Views: 48.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:11:02 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 79.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:11:26 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 74.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 13:11:29 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mHistory Load (0.8ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 100ms (Views: 86.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 13:11:29 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 104ms (Views: 50.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:11:34 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 76.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:11:59 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 63.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:14:35 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (11.4ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 177ms (Views: 161.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:15:24 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 86.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:15:50 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 54.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:17:54 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 73.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:18:25 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 76.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:18:41 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 108ms (Views: 100.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:18:52 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 59.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:19:02 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:19:11 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 69.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:19:23 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 57.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:19:51 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 62.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:20:32 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 56.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:20:47 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 60.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:21:52 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 49.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:22:03 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 143ms (Views: 135.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:22:48 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 59.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:23:02 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 120ms (Views: 113.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:23:16 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 52.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:23:44 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 65.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:24:00 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 63.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:24:13 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 82.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:24:46 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 136ms (Views: 131.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:24:57 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 73.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:25:21 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 62.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:25:39 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 63.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:26:02 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 57.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:26:12 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 49.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:27:11 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 51.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:27:27 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:27:51 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 81.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:28:04 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 98ms (Views: 91.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:28:25 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 64.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:28:38 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 64.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:28:59 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 79.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:29:23 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"/JhmoxvDBNcp2wJFop27It88G1VbFZ2zIN2JPrDSVjrFprKPaU/QtppHGa1tKFlOf+3N1D7eISERBVESXIhsRQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 49.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 13:29:36 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"authenticity_token"=>"Jbksp77PVSVaE2CPHxNM4S7Qvh23pS7CGY3tgVAxwzUch/iLzEOBROmPe2fQpq6NjgFonNJuklAoVTWtvGv5Sg=="}
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 50ms (Views: 41.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/histories/146" for ::1 at 2016-12-23 13:29:41 +0300
+Processing by HistoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MK4WUw7sLVnNJpSzcjVZP89cWqtYvQAwRfo7Lgql0xkJkMJ/fGD5OH66j1u9gLtTb42MKj12vKJ0IuMC5v/pZg==", "id"=>"146"}
+  [1m[36mHistory Load (2.0ms)[0m  [1m[34mSELECT  "histories".* FROM "histories" WHERE "histories"."id" = $1 LIMIT $2[0m  [["id", 146], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.4ms)[0m  [1m[31mDELETE FROM "histories" WHERE "histories"."id" = $1[0m  [["id", 146]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/profile
+Completed 302 Found in 52ms (ActiveRecord: 12.4ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 13:29:41 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 51ms (Views: 41.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/histories" for ::1 at 2016-12-23 13:29:43 +0300
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.8ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 73ms (Views: 64.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:29:47 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"zxPNS8CDSg7S8lyCtEwhqBjMgu6+551csQ/CWY7s5Yv2LRlnsg+eb2FuR2p7+cPEuB1Ub9ssIc6A1xp1Yrbf9A=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 96ms (Views: 91.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 13:29:55 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"authenticity_token"=>"LCszMK4HQLxDprQhta+gQYwjhiPtrmYIvWMir2SaAdQVFecc3IuU3fA6r8l6GkItLPJQoohl2pqMu/qDiMA7qw=="}
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 50ms (Views: 39.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/histories" for ::1 at 2016-12-23 13:30:02 +0300
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 72ms (Views: 64.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:30:06 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"ya4/e5wlksNoD81uubxRc5aZfzyuTbaFHD/OxQH3x8fwkOtX7qlGotuT1oZ2CbMfNkipvcuGChct5xbp7a39uA=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 37.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:30:08 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/histories" for ::1 at 2016-12-23 13:30:08 +0300
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.9ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 70ms (Views: 63.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:30:09 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/histories" for ::1 at 2016-12-23 13:30:10 +0300
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 56ms (Views: 51.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/histories" for ::1 at 2016-12-23 13:30:11 +0300
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 72ms (Views: 66.7ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-12-23 13:30:12 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DQbGTfgw2MoV0nmURExQnQVeWdsIfT8aotYBya5uL6s0OBJhirwMq6ZOYnyL+bLxpY+PWm22g4iTDtnlQjQV1A=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:30:12 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-12-23 13:30:14 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-12-23 13:30:27 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SILVDcspxRlvLCbRuDMRBQDPMjqc1spvZXAMwy+Y2CeB5SSyqWfn2ZUN03wOA8+pqYtvEjziBVkH17be5jvADg==", "user"=>{"email"=>"test@test.test", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Войти"}
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.test"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2016-12-23 10:30:27 UTC], ["last_sign_in_at", 2016-12-22 08:29:01 UTC], ["sign_in_count", 9], ["updated_at", 2016-12-23 10:30:27 UTC], ["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 215ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:30:27 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 37.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:30:32 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/histories" for ::1 at 2016-12-23 13:30:32 +0300
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:30:32 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 35.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/histories" for ::1 at 2016-12-23 13:30:36 +0300
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:30:36 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 13:30:40 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"authenticity_token"=>"S4w3j7ghbUS0jEU1vCsjHXGysMAfrdNHltBKbbDUaOn3gVUTKZygfg5cLZqZcEwCzcD2NRftuJRWqiEKiR9KlA=="}
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 81ms (Views: 72.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:33:17 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"RylvoXok3VONgTPBsL+gUzCyS2F8fVCjw14cXvQTgcH7JA0965kQaTdRW26V5M9MjMANlHQ9O3ADJHc5zdijvA=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 50.6ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-12-23 13:34:26 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+Bm1gzGTKPvIA24Lxws5QrM+GzF7A2/N+Uc9riprRaNEFNcfoC7lwXLTBqTiUFZdD0xdxHNDBB45PVbJE6Bn3g=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:34:26 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 62ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-12-23 13:34:55 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 66ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-12-23 13:34:59 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aTy/Kw/rnBB4HfaHowcygAjos7BUej1ALMVuq8K2z/NxIVHLjEL2qhQvTpk+eNkzfkqtBLPvrbr4Onz0XEs+XA==", "user"=>{"email"=>"admin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Войти"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2016-12-23 10:34:59 UTC], ["last_sign_in_at", 2016-12-23 09:33:24 UTC], ["sign_in_count", 9], ["updated_at", 2016-12-23 10:34:59 UTC], ["id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 211ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:34:59 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 36.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:35:46 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 53.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:35:55 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 51.0ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-12-23 13:36:06 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"asmxLLyIOljOefofEbwhQC1cFjv5HkQh/BcCgH4NNJjr8OB3Y73FEWBBtjF3azMxZe20fPgidscchE3htFQLlw=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:36:06 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-12-23 13:36:14 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-12-23 13:36:23 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WTXMdeoXe3AJm3Dt7rO6sc2b6QIPKRJpPMlMR7CvHxmJOjvX37o7juyQEkHVbp1JBK7McQaeOh4+6tYEWsQT2w==", "user"=>{"email"=>"admin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Войти"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2016-12-23 10:36:23 UTC], ["last_sign_in_at", 2016-12-23 10:34:59 UTC], ["sign_in_count", 10], ["updated_at", 2016-12-23 10:36:23 UTC], ["id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 195ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:36:23 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 37.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:41:45 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 325ms (Views: 309.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:42:53 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 147ms (Views: 142.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:43:17 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 160ms (Views: 151.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:43:27 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 112ms (Views: 107.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:43:32 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 121ms (Views: 116.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:44:09 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 102ms (Views: 95.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:46:02 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 104.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:46:18 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 82.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:47:10 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 186ms (Views: 181.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:47:45 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 61ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:49:18 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 165ms (Views: 158.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:49:25 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 114ms (Views: 107.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:50:06 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 210ms (Views: 203.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:50:14 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 96ms (Views: 90.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:50:25 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 60.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 13:50:44 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 90ms (Views: 85.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:24:11 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (9.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 290ms (Views: 260.9ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:25:09 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "    width": expected ";", was ": 80%;"):
+     5:    		<%= csrf_meta_tags %>
+     6: 
+     7:    		<script src="https://use.fontawesome.com/33c0f9d168.js"></script>
+     8:     	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:     
+    11:   	</head>
+  
+app/assets/stylesheets/search.scss:53
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__2898695533421066677_70124462343540'
+  Rendering /Users/LNDSLD/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/LNDSLD/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/LNDSLD/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.7ms)
+  Rendering /Users/LNDSLD/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/LNDSLD/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendering /Users/LNDSLD/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/LNDSLD/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /Users/LNDSLD/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (161.3ms)
+Started GET "/" for ::1 at 2016-12-23 14:25:22 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 114ms (Views: 107.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:25:31 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 46.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:27:13 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 101ms (Views: 96.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:27:38 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (11.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 206ms (Views: 196.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:27:52 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 49.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:28:35 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 138ms (Views: 133.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:47:08 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (30.2ms)
+  [1m[36mUser Load (14.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 363ms (Views: 295.0ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:49:05 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/LNDSLD/Desktop/Code/google_search_api/socials-search/app/views/search/input.html.erb:9: syntax error, unexpected ')'
+...kzPiQEe8SKi6z4Q', width: 100% );@output_buffer.safe_append='
+...                               ^
+/Users/LNDSLD/Desktop/Code/google_search_api/socials-search/app/views/search/input.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/LNDSLD/Desktop/Code/google_search_api/socials-search/app/views/search/input.html.erb:22: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/search/input.html.erb:9: syntax error, unexpected ')'
+app/views/search/input.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/search/input.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Users/LNDSLD/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/LNDSLD/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/LNDSLD/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.9ms)
+  Rendering /Users/LNDSLD/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/LNDSLD/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendering /Users/LNDSLD/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/LNDSLD/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/LNDSLD/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (137.8ms)
+Started GET "/" for ::1 at 2016-12-23 14:51:41 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (22.2ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 259ms (Views: 238.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:52:00 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 57.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:54:11 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (19.7ms)
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 168ms (Views: 150.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:54:25 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 76.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:55:01 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 131ms (Views: 125.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:55:58 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 108ms (Views: 104.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:56:53 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 174ms (Views: 167.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:57:04 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 105ms (Views: 99.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:57:11 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 114ms (Views: 107.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:57:44 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 104ms (Views: 98.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:57:54 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 103ms (Views: 96.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:58:16 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 79.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 14:59:05 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 120ms (Views: 116.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:01:40 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 80.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:01:56 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 95ms (Views: 91.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 15:02:09 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"authenticity_token"=>"ey/PQCCw47Ub7PS0Yh6kcQBc/kcAp0RJNs5Jrp69LsvE5Aysdev7YRUdWZfgh5jn60bd9m11B+1VCxKWyaJAuQ=="}
+  [1m[36mHistory Load (1.0ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 54ms (Views: 45.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/histories" for ::1 at 2016-12-23 15:02:12 +0300
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 71ms (Views: 64.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:02:13 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"nLa2sA00hXnssVdG5XtyvyxV6tCza5OjF6tXOrgd8AYjfXVcWG+dreJA+mVn4k4px0/JYd650Ad0bgwC7wKedA=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:02:44 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"nLa2sA00hXnssVdG5XtyvyxV6tCza5OjF6tXOrgd8AYjfXVcWG+dreJA+mVn4k4px0/JYd650Ad0bgwC7wKedA=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 51.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 15:02:45 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"authenticity_token"=>"iJKeBLqAYv1fEORoP8gviP2scbSgXNF8ZLJ4n5wXG5c3WV3o79t6KVHhSUu9URMeFrZSBc2OktgHdyOnywh15Q=="}
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 49ms (Views: 41.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/histories" for ::1 at 2016-12-23 15:02:49 +0300
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 78ms (Views: 70.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:02:51 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"DZ50uH9/8v8d8WKju7YBdM6s+BctcJ1iYD/cLfxEI9WyVbdUKiTqKxMAz4A5Lz3iJbbbpkCi3sYD+ocVq1tNpw=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 41.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 15:02:53 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"authenticity_token"=>"UcP5NEtho21oNVetXyyE1bVQJVCgHLT3oGnD5IJBEA3uCDrYHjq7uWbE+o7dtbhDXkoG4c3O91PDrJjc1V5+fw=="}
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 46ms (Views: 37.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/histories" for ::1 at 2016-12-23 15:02:58 +0300
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 65ms (Views: 58.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:02:59 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"d+sJpOEW41DdC0t8CHWUWBtXpYZZQoFmSanSQO3p+D/IIMpItE37hNP65l+K7KjO8E2GNzSQwsIqbIl4uvaWTQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 45.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:03:53 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"buj/RUIbRYw/Dd/2M2eFvT1s6eBiSOgE0ojE9Y/ioiPRIzypF0BdWDH8ctWx/rkr1nbKUQ+aq6CxTZ/N2P3MUQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 15:04:03 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"authenticity_token"=>"Usp+cAQ+gPSsRh3wb7KS1jpB2PmCR6Aecv9FVd3v583tAb2cUWWYIKK3sNPtK65A0Vv7SO+V47oROh5tivCJvw=="}
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 46ms (Views: 39.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/histories" for ::1 at 2016-12-23 15:04:12 +0300
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 73ms (Views: 64.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:04:31 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"UeF+IZGH7C5zH1Q6nQil3hfqdMjw0a6Ky6P3zM7YyODuKr3NxNz0+n3u+RkfkZlI/PBXeZ0D7S6oZqz0mcemkg=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 32.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 15:04:32 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"authenticity_token"=>"RoG0+mim9zkhrXes98tPh4bgqt2RXUtntLpyKlebWNj5SncWPf3v7S9c2o91UnMRbfqJbPyPCMPXfykSAIQ2qg=="}
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 49ms (Views: 42.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:04:41 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"J0np+6SkNW9pN/ngoPHFLGIpe3UChmdGBcVdFQhAPVCYgioX8f8tu2fGVMMiaPm6iTNYxG9UJOJmAAYtX19TIg=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 15:05:13 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"authenticity_token"=>"qGUFcpKegNwbEQ2tXSdKZcPWIeYWzPm30edaLM31j3IXrsaex8WYCBXgoI7fvnbzKMwCV3seuhOyIgEUmurhAA=="}
+  [1m[36mHistory Load (0.7ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 79ms (Views: 65.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/search/view?new=true&start=1&str=%D0%B4%D1%8F%D1%82%D0%B5%D0%BB" for ::1 at 2016-12-23 15:05:15 +0300
+Processing by SearchController#view as HTML
+  Parameters: {"new"=>"true", "start"=>"1", "str"=>"дятел"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.9ms)[0m  [1m[32mINSERT INTO "histories" ("owner", "request", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["owner", "admin"], ["request", "дятел"], ["created_at", 2016-12-23 12:05:16 UTC], ["updated_at", 2016-12-23 12:05:16 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering search/view.html.erb within layouts/application
+  Rendered search/view.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 838ms (Views: 56.4ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:05:28 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"v8e8lJibVFWMNIyNUTTNzs45go26F1FMULGMJjVCqGsADH94zcBMgYLFIa7TrfFYJSOhPNfFEugzdNceYl3GGQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:05:51 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"v8e8lJibVFWMNIyNUTTNzs45go26F1FMULGMJjVCqGsADH94zcBMgYLFIa7TrfFYJSOhPNfFEugzdNceYl3GGQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 123ms (Views: 116.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:06:04 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"v8e8lJibVFWMNIyNUTTNzs45go26F1FMULGMJjVCqGsADH94zcBMgYLFIa7TrfFYJSOhPNfFEugzdNceYl3GGQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 97ms (Views: 91.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:07:29 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"v8e8lJibVFWMNIyNUTTNzs45go26F1FMULGMJjVCqGsADH94zcBMgYLFIa7TrfFYJSOhPNfFEugzdNceYl3GGQ=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 105.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/search_req?utf8=%E2%9C%93&new=true&start=1&str=dsaffdsafa&commit=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA" for ::1 at 2016-12-23 15:07:35 +0300
+Processing by SearchController#view as HTML
+  Parameters: {"utf8"=>"✓", "new"=>"true", "start"=>"1", "str"=>"dsaffdsafa", "commit"=>"Поиск"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "histories" ("owner", "request", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["owner", "admin"], ["request", "dsaffdsafa"], ["created_at", 2016-12-23 12:07:35 UTC], ["updated_at", 2016-12-23 12:07:35 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering search/view.html.erb within layouts/application
+  Rendered search/view.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 799ms (Views: 53.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:07:40 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"L2+ZSJpjkHX7X8Oygp1g+HW3JzNW8KSn5s8HLlnF/MaQpFqkzziIofWubpEABFxunq0Egjsi5wOFClwWDtqStA=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:07:50 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"L2+ZSJpjkHX7X8Oygp1g+HW3JzNW8KSn5s8HLlnF/MaQpFqkzziIofWubpEABFxunq0Egjsi5wOFClwWDtqStA=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 88ms (Views: 82.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/search_req?utf8=%E2%9C%93&new=true&start=1&str=while&commit=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA" for ::1 at 2016-12-23 15:07:57 +0300
+Processing by SearchController#view as HTML
+  Parameters: {"utf8"=>"✓", "new"=>"true", "start"=>"1", "str"=>"while", "commit"=>"Поиск"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "histories" ("owner", "request", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["owner", "admin"], ["request", "while"], ["created_at", 2016-12-23 12:07:58 UTC], ["updated_at", 2016-12-23 12:07:58 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering search/view.html.erb within layouts/application
+  Rendered search/view.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 879ms (Views: 41.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/search/view?new=false&start=11&str=while" for ::1 at 2016-12-23 15:08:05 +0300
+Processing by SearchController#view as HTML
+  Parameters: {"new"=>"false", "start"=>"11", "str"=>"while"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering search/view.html.erb within layouts/application
+  Rendered search/view.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 667ms (Views: 64.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/search/view?new=false&start=21&str=while" for ::1 at 2016-12-23 15:08:09 +0300
+Processing by SearchController#view as HTML
+  Parameters: {"new"=>"false", "start"=>"21", "str"=>"while"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering search/view.html.erb within layouts/application
+  Rendered search/view.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 761ms (Views: 41.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/search/view?new=false&start=11&str=while" for ::1 at 2016-12-23 15:08:15 +0300
+Processing by SearchController#view as HTML
+  Parameters: {"new"=>"false", "start"=>"11", "str"=>"while"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering search/view.html.erb within layouts/application
+  Rendered search/view.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 796ms (Views: 52.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/search/view?new=false&start=21&str=while" for ::1 at 2016-12-23 15:08:21 +0300
+Processing by SearchController#view as HTML
+  Parameters: {"new"=>"false", "start"=>"21", "str"=>"while"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering search/view.html.erb within layouts/application
+  Rendered search/view.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 924ms (Views: 48.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:08:29 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"H8i3vkOg6GQVoXikwimcuwelwNW/hH7bn+WjJnDDoEmgA3RSFvvwsBtQ1YdAsKAt7L/jZNJWPX/8IPgeJ9zOOw=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 15:08:31 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"authenticity_token"=>"z9wXn4eq2ze1mUul2JUIUecyJvXgCq0BhWZB4ZQcRNhwF9Rz0vHD47to5oZaDDTHDCgFRI3Y7qXmoxrZwwMqqg=="}
+  [1m[36mHistory Load (0.8ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 47ms (Views: 38.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:08:45 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"OyulGKqUO3sZC9PbZ7EPHsSKTgvEyoSQc16jjS/uPCGE4Gb0/88jrxf6fvjlKDOIL5BtuqkYxzQQm/i1ePFSUw=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/profile" for ::1 at 2016-12-23 15:12:51 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"authenticity_token"=>"mPf56KMl9Itf5sYQt1eUEJfLzh5ESNjSW/Gn3S1CwFYnPDoE9n7sX1EXazM1zqiGfNHtrymam3Y4NPzlel2uJA=="}
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 68ms (Views: 59.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 15:12:58 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"P2pmrizDyNveRPZ57r5a6JHTFf2s4irxa0tMypo2tvWAoaVCeZjQD9C1W1psJ2Z+esk2TMEwaVUIjhfyzSnYhw=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 46.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-12-23 23:26:54 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"P2pmrizDyNveRPZ57r5a6JHTFf2s4irxa0tMypo2tvWAoaVCeZjQD9C1W1psJ2Z+esk2TMEwaVUIjhfyzSnYhw=="}
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (15.1ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 224ms (Views: 204.2ms | ActiveRecord: 1.1ms)
+
+

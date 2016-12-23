@@ -4,8 +4,9 @@
     	<div class='headline' onclick="get_socials()"><%= t('search_title') %></div>
     	<div id="google"><%= image_tag('https://www.google.ru/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png') %></div>
     	-->
-    	<%= image_tag 'https://psv4.vk.me/c812123/u19693404/docs/1cacc502cac4/Ma__ma.png?extra=CEV6mqgHfIs7-k0MDoXtYMRfgUXMd9Flj5GZ2kIuV9DFB1MW_SrI4IaFeGd7RHUWbOQnIzHdPLpV38JiCzlRwYPglfvN8_bOzUbkXykkzPiQEe8SKi6z4Q' %>
+
     	<div>
+    		<%= image_tag 'https://psv4.vk.me/c812123/u19693404/docs/1cacc502cac4/Ma__ma.png?extra=CEV6mqgHfIs7-k0MDoXtYMRfgUXMd9Flj5GZ2kIuV9DFB1MW_SrI4IaFeGd7RHUWbOQnIzHdPLpV38JiCzlRwYPglfvN8_bOzUbkXykkzPiQEe8SKi6z4Q', width: '90%' %>
 			<%= form_tag 'search_req', :method => 'get', id: 'search_form' do %>
 				<%= hidden_field_tag :new, 'true' %> 
 				<%= hidden_field_tag :start, '1' %> 

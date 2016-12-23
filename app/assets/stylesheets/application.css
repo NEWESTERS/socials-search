@@ -17,6 +17,8 @@ body {
     background-color: #ffffff;
     color: #2d2d2d;
     font-family: sans-serif;
+    width: 100%;
+    margin-left: auto;
 }
 
 .wrap {
@@ -41,8 +43,8 @@ body {
 }
 
 .btn:hover {
-    background-color: #007aff;
-    border-color: #007aff;
+    background-color: rgba(92,196,96,1);
+    border-style: none;
     cursor: pointer;
 }
 
@@ -106,9 +108,9 @@ header {
 
 header>div,
 footer>div {
-    padding: 10px;
-    text-align: center;
+    padding: 9px;
     margin: auto;
+    text-align: center;
 }
 
 header>.left {
@@ -120,14 +122,18 @@ header>.right {
 }
 
 .link {
+    padding: 13px;
     color: #48B04C;
-    padding: 6px;
     text-decoration: none;
     font-size: medium;
 }
 
 .link:hover {
     cursor: pointer;
+}
+
+.top_link:hover {
+    background-color: rgba(150,150,150,.15);
 }
 
 footer {
