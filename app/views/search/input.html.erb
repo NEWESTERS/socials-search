@@ -13,21 +13,24 @@
 				<%= text_field_tag :str, '', autofocus: true, :required => true, id: 'search_field' %>
 				<%= submit_tag t('search'), id: 'search_button' %>
 			<% end %>
-		</div><br/>
-		<div class="headline">Топ 5 запросов</div><br/>
-		<table>
-			<tr class="row_header">
-				<td class="date_cell">Кол-во</td>
-				<td class="req_cell">Запрос</td>
-			</tr>
-			<% Request.order(count: :desc).all[1..5].each do |req| %>
+		</div>
+		<% if !Request.all[1..5] == [] %>
+			<br/>
+			<div class="headline">Топ 5 запросов</div><br/>
+			<table>
 				<tr class="row_header">
-					<td class="date_cell"><%= req.count %></td>
-					<td class="req_cell"><%= link_to req.request,
-								search_view_path( :new => 'true', :start => '1', :str => req.request ) %></td>
+					<td class="date_cell">Кол-во</td>
+					<td class="req_cell">Запрос</td>
 				</tr>
-			<% end %>
-		</table>
+				<% Request.order(count: :desc).all[1..5].each do |req| %>
+					<tr class="row_header">
+						<td class="date_cell"><%= req.count %></td>
+						<td class="req_cell"><%= link_to req.request,
+									search_view_path( :new => 'true', :start => '1', :str => req.request ) %></td>
+					</tr>
+				<% end %>
+			</table>
+		<% end %>
 		<div id="tip"></div>
 	</div>
 </div>
