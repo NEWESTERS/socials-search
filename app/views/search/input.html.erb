@@ -6,14 +6,28 @@
     	-->
 
     	<div>
-    		<%= image_tag 'https://psv4.vk.me/c812123/u19693404/docs/1cacc502cac4/Ma__ma.png?extra=CEV6mqgHfIs7-k0MDoXtYMRfgUXMd9Flj5GZ2kIuV9DFB1MW_SrI4IaFeGd7RHUWbOQnIzHdPLpV38JiCzlRwYPglfvN8_bOzUbkXykkzPiQEe8SKi6z4Q', width: '90%' %>
+    		<%= image_tag 'https://psv4.vk.me/c812123/u19693404/docs/736e3f4f9232/Ma__ma.png?extra=nbU9XUjAr8z-kRhzH2Cfp1Rodcc3Pm4aWDlLYXOfNy5o9zDaR9moiVuPeecrKx1T9WogFQrG8dMQrLgZxvhPKhxb2fhEn2a8eCPRGwRAB60Ofpx8xGaJTQ', width: '90%' %>
 			<%= form_tag 'search_req', :method => 'get', id: 'search_form' do %>
 				<%= hidden_field_tag :new, 'true' %> 
 				<%= hidden_field_tag :start, '1' %> 
 				<%= text_field_tag :str, '', autofocus: true, :required => true, id: 'search_field' %>
 				<%= submit_tag t('search'), id: 'search_button' %>
 			<% end %>
-		</div>
+		</div><br/>
+		<div class="headline">Топ 5 запросов</div><br/>
+		<table>
+			<tr class="row_header">
+				<td class="date_cell">Кол-во</td>
+				<td class="req_cell">Запрос</td>
+			</tr>
+			<% Request.order(count: :desc).all[1..5].each do |req| %>
+				<tr class="row_header">
+					<td class="date_cell"><%= req.count %></td>
+					<td class="req_cell"><%= link_to req.request,
+								search_view_path( :new => 'true', :start => '1', :str => req.request ) %></td>
+				</tr>
+			<% end %>
+		</table>
 		<div id="tip"></div>
 	</div>
 </div>

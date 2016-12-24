@@ -12,6 +12,7 @@ class SearchController < ApplicationController
     @start = params[:start]
   	@req = (buf = params[:str]).nil? ? '' : buf
     get_res = get_result_hash(@req, @start)
+    db_req = Request.all.find_by(request: @req)
     
     if !get_res.nil?  
       @result_array = result_processing(get_res["items"])
@@ -26,6 +27,17 @@ class SearchController < ApplicationController
       end
       new_req.save
     end
+
+    if !db_req.nil?
+      db_req.update :count => db_req.count + 1
+    else
+      db_req = Request.new do |req|
+        req.request = @req
+        req.count = 1
+      end
+    end
+    db_req.save
+
   end
 
   def get_result_hash(request, start)
