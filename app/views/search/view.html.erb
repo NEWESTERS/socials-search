@@ -1,6 +1,6 @@
 <div class="wrap" id="output">
 	<div>
-		<%= form_tag 'search_req', :method => 'get', id: 'search_form' do %>
+		<%= form_tag '/search_req', :method => 'get', id: 'search_form' do %>
 			<%= hidden_field_tag :new, 'true' %> 
 			<%= hidden_field_tag :start, '1' %> 
 			<%= text_field_tag :str, params[:str], autofocus: true, required: true, id: 'search_field' %>
@@ -24,7 +24,7 @@
 				<% end %>
 			</table>
 		<% else %>
-			<div class='title_cell'><%= t('no_results') %></div>
+			<div id='no_results'><%= t('no_results') %></div>
 		<% end %>
 
 		<% if @start != '1' %>

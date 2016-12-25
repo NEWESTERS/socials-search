@@ -20,6 +20,17 @@
 		<% else%>
 			<div class="headline"><%= t('empty_history') %></div>
 		<% end %>
+		<% if @allow_prev %>
+			<%= link_to t('previous'),
+				users_profile_path( :start => "#{@start.to_i-10}" ),
+				class: ["btn"] %>
+		<% end %>
+
+		<% if @allow_next %>
+			<%= link_to t('next'),
+				users_profile_path( :start => "#{@start.to_i+10}" ),
+				class: ["btn"] %>
+		<% end %>
 		<% if current_user.email == 'admin' %>
 			<br/>
 			<%= link_to t('administration'), "/histories", class: ['btn'] %>

@@ -22,7 +22,7 @@ body {
 }
 
 .wrap {
-    margin-top: 5%;
+
 }
 
 .wrap>div {
@@ -107,7 +107,7 @@ header {
 
 header>div,
 footer>div {
-    padding: 9px;
+    padding: 11px;
     margin: auto;
     text-align: center;
 }

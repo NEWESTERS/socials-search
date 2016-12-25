@@ -37,6 +37,10 @@ table {
 	font-size: xx-large;
 }
 
+#search {
+	margin-top: 5%;
+}
+
 #search>div {
 	width: 45%;
 }
@@ -50,7 +54,7 @@ table {
     border-color: #48B04C;
     border-style: solid;
     border-width: 1%;
-    width: 80%;
+    width: 79%;
     box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.15);
 }
 
@@ -84,4 +88,9 @@ table {
 #search_button:hover {
     cursor: pointer;
     background: linear-gradient(to right, rgba(72,176,76,1) 0%, rgba(92,196,96,1) 100%);
+}
+
+#no_results {
+	font-size: x-large;
+	margin: 30px;
 }

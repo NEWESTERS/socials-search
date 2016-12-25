@@ -16,7 +16,7 @@
 				<% if user_signed_in? %>
 					
 				    <div class="right">
-				    	<%= link_to t('request_history'), users_profile_path, :method => :get, class: ['link', 'top_link'] %>
+				    	<%= link_to t('request_history'), users_profile_path( :start => '0' ), :method => :get, class: ['link', 'top_link'] %>
 					    <%= link_to t('sign_out'), destroy_user_session_path, :method => :delete, class: ['link', 'top_link'] %> 
 				    </div>
 				    <div class="headline right"><%= current_user.email %></div>

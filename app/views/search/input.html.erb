@@ -6,8 +6,8 @@
     	-->
 
     	<div>
-    		<%= image_tag 'https://psv4.vk.me/c812123/u19693404/docs/736e3f4f9232/Ma__ma.png?extra=nbU9XUjAr8z-kRhzH2Cfp1Rodcc3Pm4aWDlLYXOfNy5o9zDaR9moiVuPeecrKx1T9WogFQrG8dMQrLgZxvhPKhxb2fhEn2a8eCPRGwRAB60Ofpx8xGaJTQ', width: '90%' %>
-			<%= form_tag 'search_req', :method => 'get', id: 'search_form' do %>
+    		<%= image_tag 'https://mographic.files.wordpress.com/2016/12/unspecified.png', width: '90%' %>
+			<%= form_tag '/search_req', :method => 'get', id: 'search_form' do %>
 				<%= hidden_field_tag :new, 'true' %> 
 				<%= hidden_field_tag :start, '1' %> 
 				<%= text_field_tag :str, '', autofocus: true, :required => true, id: 'search_field' %>
