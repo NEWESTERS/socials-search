@@ -26362,3 +26362,53 @@ Processing by SearchController#input as HTML
 Completed 200 OK in 70ms (Views: 65.4ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/" for ::1 at 2016-12-25 23:09:20 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  [1m[36mRequest Load (1.2ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  [1m[36mRequest Load (0.5ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  Rendered search/input.html.erb within layouts/application (48.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 664ms (Views: 612.4ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-25 23:09:28 +0300
+Processing by SearchController#input as HTML
+  Rendering search/input.html.erb within layouts/application
+  [1m[36mRequest Load (0.3ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  [1m[36mRequest Load (0.3ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  Rendered search/input.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/requests" for ::1 at 2016-12-25 23:09:30 +0300
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering requests/index.html.erb within layouts/application
+  [1m[36mRequest Load (0.5ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  Rendered requests/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 65ms (Views: 56.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/requests" for ::1 at 2016-12-25 23:09:30 +0300
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering requests/index.html.erb within layouts/application
+  [1m[36mRequest Load (0.5ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  Rendered requests/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 160ms (Views: 61.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-25 23:09:34 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"kEb7gerANKtWT1eqyCvQTn2GrhQn0bQ0qJow1hDe3BKlK5Eskfrt6LVzz1n3yWO55SHHGgtnoObecLl/vY0ExQ=="}
+  Rendering search/input.html.erb within layouts/application
+  [1m[36mRequest Load (0.3ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  [1m[36mRequest Load (0.5ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  Rendered search/input.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 58.3ms | ActiveRecord: 1.2ms)
+
+

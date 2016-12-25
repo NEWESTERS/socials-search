@@ -14,7 +14,7 @@
 				<%= submit_tag t('search'), id: 'search_button' %>
 			<% end %>
 		</div>
-		<% if Request.all[1..5] != [] %>
+		<% if Request.all[0..4] != [] %>
 			<br/>
 			<div class="headline">Топ 5 запросов</div><br/>
 			<table>
@@ -22,7 +22,7 @@
 					<td class="date_cell">Кол-во</td>
 					<td class="req_cell">Запрос</td>
 				</tr>
-				<% Request.order(count: :desc).all[1..5].each do |req| %>
+				<% Request.order(count: :desc).all[0..4].each do |req| %>
 					<tr class="row_header">
 						<td class="date_cell"><%= req.count %></td>
 						<td class="req_cell"><%= link_to req.request,
