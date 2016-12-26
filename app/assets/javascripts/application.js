@@ -14,3 +14,23 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+
+
+$(function() {
+    $(".row .req_cell").mouseenter(function () {
+        $(this).css("font-size", "medium");
+    }).mouseleave(function () {
+        $(this).css("font-size", "small");
+    });
+});
+
+$(function() {
+	$('#admin').find("div").hide();
+	$('#admin').mouseenter(function(){
+		$(this).find("div").show(200);
+	}).mouseleave(function(){
+		$(this).find("div").hide(200);
+	});
+});

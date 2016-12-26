@@ -9,7 +9,7 @@
 					<td class="date_cell"></td>
 				</tr>
 				<% @history.each do |req| %>
-					<tr class="row_header">
+					<tr class="row">
 						<td class="date_cell"><%= req.created_at.localtime.to_formatted_s(:db) %></td>
 						<td class="req_cell"><%= link_to req.request,
 							search_view_path( :new => 'true', :start => '1', :str => req.request ) %></td>
@@ -33,7 +33,13 @@
 		<% end %>
 		<% if current_user.email == 'admin' %>
 			<br/>
-			<%= link_to t('administration'), "/histories", class: ['btn'] %>
+			<div id="admin">
+				<%= link_to t('administration'), "/histories", class: ['btn'] %>
+				<div>
+					<%= link_to t('histories'), "/histories", class: ['btn'] %>
+					<%= link_to t('requests'), "/requests", class: ['btn'] %>
+				</div>
+			</div>
 		<% end %>
   	</div>
 </div>

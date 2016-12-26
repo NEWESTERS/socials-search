@@ -13,20 +13,21 @@
 				<%= text_field_tag :str, '', autofocus: true, :required => true, id: 'search_field' %>
 				<%= submit_tag t('search'), id: 'search_button' %>
 			<% end %>
+			<div id="results"></div>
 		</div>
 		<% if Request.all[0..4] != [] %>
 			<br/>
 			<div class="headline">Топ 5 запросов</div><br/>
 			<table>
 				<tr class="row_header">
-					<td class="date_cell">Кол-во</td>
 					<td class="req_cell">Запрос</td>
+					<td class="date_cell">Кол-во</td>					
 				</tr>
 				<% Request.order(count: :desc).all[0..4].each do |req| %>
-					<tr class="row_header">
-						<td class="date_cell"><%= req.count %></td>
+					<tr class="row">
 						<td class="req_cell"><%= link_to req.request,
 									search_view_path( :new => 'true', :start => '1', :str => req.request ) %></td>
+						<td class="date_cell"><%= req.count %></td>									
 					</tr>
 				<% end %>
 			</table>

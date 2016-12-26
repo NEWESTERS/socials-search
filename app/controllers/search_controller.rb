@@ -20,24 +20,25 @@ class SearchController < ApplicationController
       @result_array = nil
     end
 
-    if !current_user.nil? && @new == 'true'
-      new_req = History.new do |req|
-        req.owner = current_user.email
-        req.request = @req
+    if @new == 'true'
+      if !current_user.nil?
+        new_req = History.new do |req|
+          req.owner = current_user.email
+          req.request = @req
+        end
+        new_req.save
       end
-      new_req.save
-    end
 
-    if !db_req.nil?
-      db_req.update :count => db_req.count + 1
-    else
-      db_req = Request.new do |req|
-        req.request = @req
-        req.count = 1
+      if !db_req.nil?
+        db_req.update :count => db_req.count + 1
+      else
+        db_req = Request.new do |req|
+          req.request = @req
+          req.count = 1
+        end
       end
+      db_req.save
     end
-    db_req.save
-
   end
 
   def get_result_hash(request, start)

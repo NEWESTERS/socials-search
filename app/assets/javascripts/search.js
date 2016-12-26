@@ -7,3 +7,4 @@ function get_socials() {
 		result.innerHTML = '';
 	}
 }
+
