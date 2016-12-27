@@ -1,0 +1,39 @@
+<div class="wrap" id="history">
+	<div>
+		<div>
+			<%= link_to 'Hour', top_hour_path( :start => '1'), class: ['btn'] %>
+			<%= link_to 'Day', top_day_path( :start => '1'), class: ['btn'] %>
+			<%= link_to 'Week', top_week_path( :start => '1'), class: ['btn'] %>
+			<%= link_to 'Month', top_month_path( :start => '1'), class: ['btn'] %>
+		</div>
+		<h1>Топ запросов за всё время</h1>
+		<% if @top_all.any? %>
+			<table class="table">
+				<tr class="row_header">
+					<td class="date_cell"><%= 'count' %></td>
+					<td class="req_cell"><%= t('request') %></td>
+				</tr>
+				<% @top_all.each do |req| %>
+					<tr class="row">
+						<td class="date_cell"><%= req.count %></td>
+						<td class="req_cell"><%= link_to req.request,
+							search_view_path( :new => 'true', :start => '1', :str => req.request ) %></td>
+					</tr>
+				<% end %>
+			</table>
+		<% else%>
+			<div class="headline"><%= 'За последний час нет результатов' %></div>
+		<% end %>
+		<% if @allow_prev %>
+			<%= link_to t('previous'),
+				top_all_path( :start => "#{@start.to_i-10}" ),
+				class: ["btn"] %>
+		<% end %>
+
+		<% if @allow_next %>
+			<%= link_to t('next'),
+				top_all_path( :start => "#{@start.to_i+10}" ),
+				class: ["btn"] %>
+		<% end %>
+  	</div>
+</div>

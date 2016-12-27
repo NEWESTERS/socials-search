@@ -1,10 +1,5 @@
 <div class="wrap" id="search">
 	<div>
-		<!--
-    	<div class='headline' onclick="get_socials()"><%= t('search_title') %></div>
-    	<div id="google"><%= image_tag('https://www.google.ru/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png') %></div>
-    	-->
-
     	<div>
     		<%= image_tag 'https://mographic.files.wordpress.com/2016/12/unspecified.png', width: '90%' %>
 			<%= form_tag '/search_req', :method => 'get', id: 'search_form' do %>
@@ -15,23 +10,81 @@
 			<% end %>
 			<div id="results"></div>
 		</div>
-		<% if Request.all[0..4] != [] %>
-			<br/>
-			<div class="headline">Топ 5 запросов</div><br/>
-			<table>
+		<br/>
+		<div class="headline">Топ 5 запросов</div><br/>
+
+		<div>
+			<a class="btn" id="top_hour_btn">За час</a>
+			<a class="btn" id="top_day_btn">За день</a>
+			<a class="btn" id="top_week_btn">За неделю</a>
+			<a class="btn" id="top_month_btn">За месяц</a>
+		</div><br/>
+
+		<table id="top_hour">
+			<% if @top_hour[0..4] != [] %>
 				<tr class="row_header">
 					<td class="req_cell">Запрос</td>
 					<td class="date_cell">Кол-во</td>					
 				</tr>
-				<% Request.order(count: :desc).all[0..4].each do |req| %>
+				<% @top_hour[0..4].each do |req| %>
 					<tr class="row">
 						<td class="req_cell"><%= link_to req.request,
 									search_view_path( :new => 'true', :start => '1', :str => req.request ) %></td>
 						<td class="date_cell"><%= req.count %></td>									
 					</tr>
 				<% end %>
-			</table>
-		<% end %>
-		<div id="tip"></div>
+			<% else %>
+				<tr class="row"><td>За последний час нет результатов</td></tr>
+			<% end %>
+		</table>
+
+		<table id="top_day">
+			<tr class="row_header">
+				<td class="req_cell">Запрос</td>
+				<td class="date_cell">Кол-во</td>					
+			</tr>
+			<% if @top_day[0..4] != [] %>
+				<% @top_day[0..4].each do |req| %>
+					<tr class="row">
+						<td class="req_cell"><%= link_to req.request,
+									search_view_path( :new => 'true', :start => '1', :str => req.request ) %></td>
+						<td class="date_cell"><%= req.count %></td>									
+					</tr>
+				<% end %>
+			<% end %>
+		</table>
+
+		<table id="top_month">
+			<tr class="row_header">
+				<td class="req_cell">Запрос</td>
+				<td class="date_cell">Кол-во</td>					
+			</tr>
+			<% if @top_month[0..4] != [] %>
+				<% @top_month[0..4].each do |req| %>
+					<tr class="row">
+						<td class="req_cell"><%= link_to req.request,
+									search_view_path( :new => 'true', :start => '1', :str => req.request ) %></td>
+						<td class="date_cell"><%= req.count %></td>									
+					</tr>
+				<% end %>
+			<% end %>
+		</table>
+
+		<table id="top_week">
+			<tr class="row_header">
+				<td class="req_cell">Запрос</td>
+				<td class="date_cell">Кол-во</td>					
+			</tr>
+			<% if @top_week[0..4] != [] %>
+				<% @top_week[0..4].each do |req| %>
+					<tr class="row">
+						<td class="req_cell"><%= link_to req.request,
+									search_view_path( :new => 'true', :start => '1', :str => req.request ) %></td>
+						<td class="date_cell"><%= req.count %></td>									
+					</tr>
+				<% end %>
+			<% end %>
+		</table>
+		<%= link_to 'Все', top_all_path( :start => '1'), class: ['btn'] %>
 	</div>
 </div>

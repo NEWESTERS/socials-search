@@ -5,6 +5,10 @@ require 'net/http'
 
 class SearchController < ApplicationController
   def input
+    @top_hour = Request.order(count: :desc).all.select{ |x| x.updated_at.localtime > Time.zone.now - 1.hour }
+    @top_day = Request.order(count: :desc).all.select{ |x| x.updated_at.localtime > Time.zone.now - 1.day }
+    @top_month = Request.order(count: :desc).all.select{ |x| x.updated_at.localtime > Time.zone.now - 1.month }
+    @top_week = Request.order(count: :desc).all.select{ |x| x.updated_at.localtime > Time.zone.now - 7.days }
   end
 
   def view
@@ -41,7 +45,7 @@ class SearchController < ApplicationController
     end
   end
 
-  def get_result_hash(request, start)
+  def get_result_hash request, start 
     get_link = 'https://www.googleapis.com/customsearch/v1?q=' + request + '&start=' + start + '&cx=010204896937700981713:-oz6bxkupgk&key=AIzaSyAmWM5aIFTy4dDJ8xmaVK7SjvtfUjC_r5E' 
     get_link = Addressable::URI.parse(get_link).normalize
     JSON.parse(Net::HTTP.get(URI.parse(get_link)))

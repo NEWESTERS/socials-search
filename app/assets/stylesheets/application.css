@@ -21,10 +21,6 @@ body {
     margin: auto;
 }
 
-.wrap {
-
-}
-
 .wrap>div {
     padding: 10px;
     text-align: center;
@@ -32,6 +28,7 @@ body {
 }
 
 .btn {
+    max-width: 100px;
     border-style: none;
 	color: white;
     padding: 6px;
@@ -138,5 +135,5 @@ header>.right {
 footer {
     width: 100%;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 3%;
 }
