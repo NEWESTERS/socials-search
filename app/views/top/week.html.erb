@@ -7,7 +7,7 @@
 			<%= link_to 'Month', top_month_path( :start => '1'), class: ['btn'] %>
 		</div>
 		<h1>Топ запросов за неделю</h1>
-		<% if @top_week.any? %>
+		<% if !@top_week.nil? && @top_week.any? %>
 			<table class="table">
 				<tr class="row_header">
 					<td class="date_cell"><%= 'count' %></td>

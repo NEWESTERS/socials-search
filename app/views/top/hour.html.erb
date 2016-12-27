@@ -7,7 +7,7 @@
 			<%= link_to 'Month', top_month_path( :start => '1'), class: ['btn'] %>
 		</div>
 		<h1>Топ запросов за последний час</h1>
-		<% if @top_hour.any? %>
+		<% if !@top_hour.nil? && @top_hour.any? %>
 			<table class="table">
 				<tr class="row_header">
 					<td class="date_cell"><%= 'count' %></td>
