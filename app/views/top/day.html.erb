@@ -1,23 +1,23 @@
 <div class="wrap" id="history">
 	<div>
 		<div>
-			<%= link_to 'All', top_all_path( :start => '1'), class: ['btn'] %>
-			<%= link_to 'Hour', top_hour_path( :start => '1'), class: ['btn'] %>
-			<%= link_to 'Week', top_week_path( :start => '1'), class: ['btn'] %>
-			<%= link_to 'Month', top_month_path( :start => '1'), class: ['btn'] %>
+			<%= link_to 'All', top_all_path( :start => '0'), class: ['btn'] %>
+			<%= link_to 'Hour', top_hour_path( :start => '0'), class: ['btn'] %>
+			<%= link_to 'Week', top_week_path( :start => '0'), class: ['btn'] %>
+			<%= link_to 'Month', top_month_path( :start => '0'), class: ['btn'] %>
 		</div>
 		<h1>Топ запросов за последний день</h1>
 		<% if !@top_day.nil? && @top_day.any? %>
 			<table class="table">
 				<tr class="row_header">
-					<td class="date_cell"><%= 'count' %></td>
+					<td class="date_cell"><%= t('count') %></td>
 					<td class="req_cell"><%= t('request') %></td>
 				</tr>
 				<% @top_day.each do |req| %>
 					<tr class="row">
 						<td class="date_cell"><%= req.count %></td>
 						<td class="req_cell"><%= link_to req.request,
-							search_view_path( :new => 'true', :start => '1', :str => req.request ) %></td>
+							search_view_path( :new => 'true', :start => '0', :str => req.request ) %></td>
 					</tr>
 				<% end %>
 			</table>

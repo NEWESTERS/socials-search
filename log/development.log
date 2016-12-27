@@ -33126,3 +33126,95 @@ Processing by TopController#all as HTML
 Completed 200 OK in 61ms (Views: 54.4ms | ActiveRecord: 2.1ms)
 
 
+Started GET "/top/hour?start=1" for ::1 at 2016-12-28 01:47:18 +0300
+Processing by TopController#hour as HTML
+  Parameters: {"start"=>"1"}
+  [1m[36mRequest Load (5.2ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  Rendering top/hour.html.erb within layouts/application
+  Rendered top/hour.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 140ms (Views: 102.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-28 01:47:20 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"L/kEWhleQu3hVESbihvtpiDlxOVa94Jyv6Uhb0nzU3z1Am58aCfgRmda50DSxmWF6822/b3SctJfiZAV7bebAA=="}
+  [1m[36mRequest Load (0.9ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 53.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/search_req?utf8=%E2%9C%93&new=true&start=1&str=oru&commit=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA" for ::1 at 2016-12-28 01:47:26 +0300
+Processing by SearchController#view as HTML
+  Parameters: {"utf8"=>"✓", "new"=>"true", "start"=>"1", "str"=>"oru", "commit"=>"Поиск"}
+  [1m[36mRequest Load (1.7ms)[0m  [1m[34mSELECT  "requests".* FROM "requests" WHERE "requests"."request" = $1 LIMIT $2[0m  [["request", "oru"], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[32mINSERT INTO "histories" ("owner", "request", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["owner", "admin"], ["request", "oru"], ["created_at", 2016-12-27 22:47:28 UTC], ["updated_at", 2016-12-27 22:47:28 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "requests" ("request", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["request", "oru"], ["count", 1], ["created_at", 2016-12-27 22:47:28 UTC], ["updated_at", 2016-12-27 22:47:28 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering search/view.html.erb within layouts/application
+  Rendered search/view.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 1913ms (Views: 45.6ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-28 01:47:29 +0300
+Processing by SearchController#input as HTML
+  Parameters: {"authenticity_token"=>"8YdXcBu/GsKvMkkwab4tX91qPj/xOh6DYOxoqUUMkXcrfD1Wasa4aSk86usxY6V8FkJMJxYf7iOAwNnT4UhZCw=="}
+  [1m[36mRequest Load (0.8ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (7.4ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 61.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/top/all?start=1" for ::1 at 2016-12-28 01:47:32 +0300
+Processing by TopController#all as HTML
+  Parameters: {"start"=>"1"}
+  [1m[36mRequest Load (0.7ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  Rendering top/all.html.erb within layouts/application
+  Rendered top/all.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 104ms (Views: 96.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/top/hour?start=1" for ::1 at 2016-12-28 01:47:33 +0300
+Processing by TopController#hour as HTML
+  Parameters: {"start"=>"1"}
+  [1m[36mRequest Load (0.6ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  Rendering top/hour.html.erb within layouts/application
+  Rendered top/hour.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 50.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/top/hour?start=1" for ::1 at 2016-12-28 01:48:04 +0300
+Processing by TopController#hour as HTML
+  Parameters: {"authenticity_token"=>"8YdXcBu/GsKvMkkwab4tX91qPj/xOh6DYOxoqUUMkXcrfD1Wasa4aSk86usxY6V8FkJMJxYf7iOAwNnT4UhZCw==", "start"=>"1"}
+  [1m[36mRequest Load (0.6ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  Rendering top/hour.html.erb within layouts/application
+  Rendered top/hour.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 55.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/top/hour?start=0" for ::1 at 2016-12-28 01:50:25 +0300
+Processing by TopController#hour as HTML
+  Parameters: {"start"=>"0"}
+  [1m[36mRequest Load (0.4ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  Rendering top/hour.html.erb within layouts/application
+  Rendered top/hour.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 62.8ms | ActiveRecord: 1.0ms)
+
+

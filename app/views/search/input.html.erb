@@ -79,7 +79,7 @@
 				<% @top_week[0..4].each do |req| %>
 					<tr class="row">
 						<td class="req_cell"><%= link_to req.request,
-									search_view_path( :new => 'true', :start => '1', :str => req.request ) %></td>
+									search_view_path( :new => 'true', :start => '0', :str => req.request ) %></td>
 						<td class="date_cell"><%= req.count %></td>									
 					</tr>
 				<% end %>

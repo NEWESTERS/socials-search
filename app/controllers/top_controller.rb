@@ -27,7 +27,7 @@ class TopController < ApplicationController
     @start = params[:start].to_i
     top_week_buf = Request.order(count: :desc).all.select{ |x| x.updated_at.localtime > Time.zone.now - 7.days }
     @top_week = top_week_buf[@start...@start+10]
-    @allow_prev = top_week_buf[@start-10...@start].any? && !top_week_buf[@start-10...@start].nil?
+    @allow_prev = !top_week_buf[@start-10...@start].nil? && top_week_buf[@start-10...@start].any?
     @allow_next = !top_week_buf[@start+10...@start+20].nil?
   end
 
