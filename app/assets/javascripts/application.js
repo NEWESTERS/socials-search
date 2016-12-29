@@ -19,18 +19,18 @@
 
 
 $(function() {
-    $(".row .req_cell").mouseenter(function () {
+    $(".row .req_cell").on('mouseenter', function () {
+        $(this).css("font-size", "large");
+    }).on('mouseleave', function () {
         $(this).css("font-size", "medium");
-    }).mouseleave(function () {
-        $(this).css("font-size", "small");
     });
 });
 
 $(function() {
 	$('#admin').find("div").hide();
-	$('#admin').mouseenter(function(){
+	$('#admin').on('mouseenter', function(){
 		$(this).find("div").show(200);
-	}).mouseleave(function(){
+	}).on('mouseleave', function(){
 		$(this).find("div").hide(200);
 	});
 });

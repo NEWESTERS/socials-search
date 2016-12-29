@@ -6,7 +6,8 @@ class HistoriesControllerTest < ActionDispatch::IntegrationTest
     @user_for_tests = users(:user_for_tests)
   end
 
-  test "should get index not admin" do
+  # Попытка получить список историй не админу
+  test "fail get index not admin" do
     post user_session_path, params:
       { 'user[email]' => @user_for_tests.email,
         'user[password]' => 'password' }
@@ -14,11 +15,13 @@ class HistoriesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_path
   end
 
+  # Попытка доступа к форме создания записи в истории
   test "should get new" do
     get new_history_url
     assert_response :success
   end
 
+  # Попытка создать новую запись в истории
   test "should create history" do
     assert_difference('History.count') do
       post histories_url, params: { history: { owner: @history.owner, request: @history.request } }

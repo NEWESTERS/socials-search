@@ -7,6 +7,7 @@ class UserFlowsTest < ActionDispatch::IntegrationTest
     @admin = users(:admin)
   end
 
+  # Регистрация
   test 'sign up' do
     post user_registration_path, params:
       { 'user[email]' => 'email@example.com',
@@ -18,15 +19,17 @@ class UserFlowsTest < ActionDispatch::IntegrationTest
     assert User.find_by_email('email@example.com')
   end
 
+  # Ошибка регистрации(некорректное заполнение формы)
   test 'fail sign up' do
     post user_registration_path, params:
       { 'user[email]' => 'email@example.com',
         'user[password]' => 'password',
         'user[password_confirmation]' => 'password1' }
 
-    assert_response :success # Controller didn't redirect to root_path
+    assert_response :success
   end
 
+  # Вход и создание записи в истории
   test 'sign in and add to history' do
     post user_session_path, params:
       { 'user[email]' => @user_for_tests.email,
@@ -35,6 +38,7 @@ class UserFlowsTest < ActionDispatch::IntegrationTest
     assert History.where( owner: @user_for_tests.email, request: @test_req )
   end
 
+  # Попытка получения доступа к панели админа не админу
   test 'fail not admin to administrate' do
     post user_session_path, params:
       { 'user[email]' => @user_for_tests.email,
@@ -47,6 +51,7 @@ class UserFlowsTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_path
   end
 
+  # Попытка получения доступа к панели админа админу
   test 'admin to administrate' do
     post user_session_path, params:
       { 'user[email]' => @admin.email,
@@ -59,6 +64,7 @@ class UserFlowsTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  # Попытка удалить чужую запись в истории
   test 'fail to destroy strangers history' do
     post user_session_path, params:
       { 'user[email]' => @admin.email,
@@ -77,6 +83,7 @@ class UserFlowsTest < ActionDispatch::IntegrationTest
     end
   end
 
+  # Попытка удалить свою запись в истории
   test 'destroy self history' do
     post user_session_path, params:
       { 'user[email]' => @user_for_tests.email,

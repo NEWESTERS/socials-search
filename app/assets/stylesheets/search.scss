@@ -7,7 +7,7 @@ p {
 	font-weight: bold;
 }
 
-table {
+#periodic-top>table {
 	width: 60%;
 	border-collapse: collapse;
 	display: table;
@@ -16,6 +16,7 @@ table {
 
 .img_cell,
 .title_cell {
+	font-size: medium;
 	height: 30px;
 	padding: 5px;
 }
@@ -25,8 +26,9 @@ table {
 }
 
 .title_cell,
-.req_cell {
-	font-size: small;
+.req_cell,
+.date_cell {
+	font-size: medium;
 	width: 80%;
 	text-align: left;
 }
@@ -40,7 +42,7 @@ table {
 }
 
 #search>div {
-	width: 45%;
+	width: 60%;
 }
 
 #search_field {
@@ -64,7 +66,7 @@ table {
 }
 
 #search_form {
-	width: 100%;
+	width: 80%;
 	display: inline-table;
 	border-collapse: collapse;
 }
@@ -91,4 +93,61 @@ table {
 #no_results {
 	font-size: x-large;
 	margin: 30px;
+}
+
+.tab {
+	padding: 5px;
+	border: solid;
+	/*
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	*/
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 0px;
+	border-color: #48B04C;
+	background-color: #48B04C;
+	color: #FFFFFF;
+	font-size: medium;
+
+}
+
+.tab:hover {
+	color: #48B04C;
+	background-color: #FFFFFF;
+	cursor: pointer;
+}
+
+.square {
+	display: inline-block;
+	height: 90px;
+	width: 90px;
+	background-color: #48B04C;
+	margin: 5px;
+	color: white;
+	border: solid #48B04C 1px;
+}
+
+.square:hover {
+	color: #48B04C;
+	background-color: #FFFFFF;
+	cursor: pointer;
+}	
+
+.top {
+	display: inline-table;
+}
+
+#divider {
+	width: 20%;
+}
+
+.label {
+	font-size: medium;
+	margin-top: 20px;
+}
+
+.count {
+	margin-top: 20px;
 }

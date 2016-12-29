@@ -5,10 +5,11 @@ require 'net/http'
 
 class SearchController < ApplicationController
   def input
-    @top_hour = Request.order(count: :desc).all.select{ |x| x.updated_at.localtime > Time.zone.now - 1.hour }
-    @top_day = Request.order(count: :desc).all.select{ |x| x.updated_at.localtime > Time.zone.now - 1.day }
-    @top_month = Request.order(count: :desc).all.select{ |x| x.updated_at.localtime > Time.zone.now - 1.month }
-    @top_week = Request.order(count: :desc).all.select{ |x| x.updated_at.localtime > Time.zone.now - 7.days }
+    @top = Request.order(count: :desc).all
+    @top_hour = @top.select{ |x| x.updated_at.localtime > Time.zone.now - 1.hour }
+    @top_day = @top.select{ |x| x.updated_at.localtime > Time.zone.now - 1.day }
+    @top_month = @top.select{ |x| x.updated_at.localtime > Time.zone.now - 1.month }
+    @top_week = @top.select{ |x| x.updated_at.localtime > Time.zone.now - 7.days }
   end
 
   def view
