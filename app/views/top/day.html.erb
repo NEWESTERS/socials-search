@@ -1,10 +1,10 @@
 <div class="wrap" id="history">
 	<div>
 		<div>
-			<%= link_to 'All', top_all_path( :start => '0'), class: ['btn'] %>
-			<%= link_to 'Hour', top_hour_path( :start => '0'), class: ['btn'] %>
-			<%= link_to 'Week', top_week_path( :start => '0'), class: ['btn'] %>
-			<%= link_to 'Month', top_month_path( :start => '0'), class: ['btn'] %>
+			<%= link_to t('all'), top_all_path( :start => '0'), class: ['btn'] %>
+			<%= link_to t('for') + t('hour'), top_hour_path( :start => '0'), class: ['btn'] %>
+			<%= link_to t('for') + t('week'), top_week_path( :start => '0'), class: ['btn'] %>
+			<%= link_to t('for') + t('month'), top_month_path( :start => '0'), class: ['btn'] %>
 		</div>
 		<h1>Топ запросов за последний день</h1>
 		<% if !@top_day.nil? && @top_day.any? %>

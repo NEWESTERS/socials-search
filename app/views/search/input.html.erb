@@ -12,6 +12,8 @@
 		</div>
 		<br/>
 		<div class="headline"><%= t('top') %></div><br/>
+		<table>
+		<td>
 		<div id="periodic-top" class="top">
 			<div>
 				<a class="tab" id="top_hour_btn"><%= t('for') + t('hour') %></a>
@@ -84,33 +86,39 @@
 						</tr>
 					<% end %>
 				<% end %>
-			</table>
-			<!--  <%= link_to t('all'), top_all_path( :start => '1'), class: ['btn'] %>  -->
-		</div>
+			</table><br/>
+			<%= link_to t('more'), top_all_path( :start => '1'), class: ['btn'] %>
+		</div></td>
 
-		<div id="divider" class="top"></div>
-
-				<div id="all-top" class="top">
+		<td><div id="divider" class="top"></div></td>
+			<td>
+				<table id="all-top" class="top">
 				<% if @top[0..3] != [] %>
 					<% @top[0..3].each_slice(2) do |req| %>
-						<div class="square_row">
+						<tr class="square_row">
 							<%= link_to search_view_path( :new => 'true', :start => '1', :str => req[0].request ) do %>
+							<td>
 								<div class="square">							
 									<div class="label">   <%= req[0].request %>   </div>									
 									<div class="count">   <%= req[0].count %>   </div>
 								</div>
+							</td>
 							<% end %>
 
 
 							<%= link_to search_view_path( :new => 'true', :start => '1', :str => req[1].request ) do %>
+							<td>
 								<div class="square">							
 									<div class="label">   <%= req[1].request %>   </div>									
 									<div class="count">   <%= req[1].count %>   </div>
 								</div>
+							</td>
 							<% end %>	
-						</div>
+						</tr>
 					<% end %>
 				<% end %>
-		</div>
+				</table>
+			</td>
+		</table>
 	</div>
 </div>
