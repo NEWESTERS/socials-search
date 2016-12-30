@@ -37075,3 +37075,22 @@ Processing by SearchController#input as HTML
 Completed 200 OK in 60ms (Views: 47.2ms | ActiveRecord: 2.5ms)
 
 
+Started GET "/" for ::1 at 2016-12-30 23:57:26 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#input as HTML
+  [1m[36mRequest Load (1.6ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (14.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 715ms (Views: 630.8ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-30 23:57:57 +0300
+Processing by SearchController#input as HTML
+  [1m[36mRequest Load (0.4ms)[0m  [1m[34mSELECT "requests".* FROM "requests" ORDER BY "requests"."count" DESC[0m
+  Rendering search/input.html.erb within layouts/application
+  Rendered search/input.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 128ms (Views: 110.1ms | ActiveRecord: 1.0ms)
+
+

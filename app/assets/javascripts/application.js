@@ -20,9 +20,9 @@
 
 $(function() {
     $(".row .req_cell").on('mouseenter', function () {
-        $(this).css("font-size", "large");
-    }).on('mouseleave', function () {
         $(this).css("font-size", "medium");
+    }).on('mouseleave', function () {
+        $(this).css("font-size", "small");
     });
 });
 
