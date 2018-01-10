@@ -51,7 +51,8 @@ p {
 	display: table-cell;
 	height: 30px;
 	font-size: large;
-    border-color: #48B04C;
+    /* border-color: #48B04C; */
+    border-color: #390408;
     border-style: solid;
     border-width: 1%;
     width: 79%;
@@ -78,7 +79,8 @@ p {
 	color: white;
     text-decoration: none;
     font-size: 95%;
-    background-color: #48B04C;
+    /* background-color: #48B04C; */
+    background-color: #390408;
     font-family: sans-serif;
 	height: 36px;
     font-family: sans-serif;
@@ -87,7 +89,8 @@ p {
 
 #search_button:hover {
     cursor: pointer;
-    background: linear-gradient(to right, rgba(72,176,76,1) 0%, rgba(92,196,96,1) 100%);
+    /* background: linear-gradient(to right, rgba(72,176,76,1) 0%, rgba(92,196,96,1) 100%); */
+    background: linear-gradient(to right, rgba(57,4,8,1) 0%, rgba(77,24,28,1) 100%);
 }
 
 #no_results {
@@ -106,15 +109,18 @@ p {
 	border-left-width: 1px;
 	border-right-width: 1px;
 	border-bottom-width: 0px;
-	border-color: #48B04C;
-	background-color: #48B04C;
+	/* border-color: #48B04C; */
+    border-color: #390408;
+	/* background-color: #48B04C; */
+    background-color: #390408;
 	color: #FFFFFF;
 	font-size: medium;
 
 }
 
 .tab:hover {
-	color: #48B04C;
+	/* color: #48B04C; */
+    color: #390408;
 	background-color: #FFFFFF;
 	cursor: pointer;
 }
@@ -123,19 +129,20 @@ p {
 	display: inline-block;
 	height: 90px;
 	width: 90px;
-	background-color: #48B04C;
+	/* background-color: #48B04C; */
+    background-color: #390408;
 	margin: 5px;
 	color: white;
-	border: solid #48B04C 1px;
+	border: solid #390408 1px;
+	/* border: solid #48B04C 1px; */
 }
 
 .square:hover {
-	color: #48B04C;
+	/* color: #48B04C; */
+    color: #390408;
 	background-color: #FFFFFF;
 	cursor: pointer;
 }	
-
-
 
 #divider {
 	width: 50px;

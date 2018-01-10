@@ -1,11 +1,11 @@
 function active(object) {
-	$(object).css("color", "#48B04C");
+	$(object).css("color", "#390408");
 	$(object).css("background-color", "#FFFFFF");
 }
 
 function inactive(object) {
 	$(object).css("color", "#FFFFFF");
-	$(object).css("background-color", "#48B04C");
+	$(object).css("background-color", "#390408");
 }
 
 $(function() {

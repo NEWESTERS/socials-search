@@ -1,7 +1,7 @@
 <div class="wrap" id="search">
 	<div>
     	<div>
-    		<%= image_tag 'https://mographic.files.wordpress.com/2016/12/unspecified.png', width: '80%' %>
+    		<%= image_tag("logo.png") %>
 			<%= form_tag '/search_req', :method => 'get', id: 'search_form' do %>
 				<%= hidden_field_tag :new, 'true' %> 
 				<%= hidden_field_tag :start, '1' %> 
