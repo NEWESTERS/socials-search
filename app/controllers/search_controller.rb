@@ -59,9 +59,9 @@ class SearchController < ApplicationController
         if hash["displayLink"].include? "vk"
           result[:img] = "https://pp.vk.me/c543104/v543104095/1783c/cOtdLh_Fw6w.jpg"
         elsif hash["displayLink"].include? "youtube"
-          result[:img] = "https://www.youtube.com/yt/brand/media/image/YouTube-icon-full_color.png"
+          result[:img] = "https://www.youtube.com/yt/about/media/images/brand-resources/icons/YouTube_icon_full-color.svg"
         elsif hash["displayLink"].include? "twitter"
-          result[:img] = "https://pbs.twimg.com/profile_images/767879603977191425/29zfZY6I.jpg"
+          result[:img] = "http://icons.iconarchive.com/icons/uiconstock/socialmedia/512/Twitter-icon.png"
         elsif hash["displayLink"].include? "facebook"
           result[:img] = "https://facebookbrand.com/wp-content/themes/fb-branding/prj-fb-branding/assets/images/fb-art.png"
         else
